@@ -482,3 +482,4 @@ Build/*
 
 .vscode/
 Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
