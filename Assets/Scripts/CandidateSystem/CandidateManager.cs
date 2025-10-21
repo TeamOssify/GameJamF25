@@ -8,7 +8,7 @@ public class CandidateManager : MonoBehaviour {
     private CandidateDatabase db;
 
     [SerializeField]
-    public GameObject candidateWorld;
+    private CandidatePhysicalManager candidatePhysicalManager;
 
     private CandidateInstance currentCandidate;
     private List<CandidateInstance> interviewedCandidates = new List<CandidateInstance>();
@@ -29,12 +29,22 @@ public class CandidateManager : MonoBehaviour {
         currentCandidate = db.CreateRandomCandidateInstance();
 
         if (currentCandidate != null) {
-            BringInCandidate(currentCandidate);
+            BringInCandidate();
         }
     }
 
-    void BringInCandidate(CandidateInstance candidate) {
+    void BringInCandidate() {
+        candidatePhysicalManager.SpawnCandidateImage(currentCandidate);
+        candidatePhysicalManager.WalkToChair();
 
+    }
+
+    void KickCurrentCandidate() {
+        if (currentCandidate != null) {
+            currentCandidate.HasBeenInterviewed = true;
+            interviewedCandidates.Add(currentCandidate);
+        }
+        candidatePhysicalManager.WalkToDoor();
     }
 
     public CandidateInstance GetCurrentCandidate() {

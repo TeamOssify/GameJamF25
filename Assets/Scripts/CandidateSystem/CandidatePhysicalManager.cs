@@ -9,8 +9,6 @@ public class CandidatePhysicalManager : MonoBehaviour {
     private SpriteRenderer candidateSpriteRenderer;
     [SerializeField]
     private Transform candidateTransform;
-    [SerializeField]
-    private CandidateManager candidateManager;
 
     [SerializeField]
     private float speed;
@@ -33,15 +31,15 @@ public class CandidatePhysicalManager : MonoBehaviour {
         if (candidateSpriteRenderer != null) {
             candidateSpriteRenderer.enabled = false;
         }
+        //for manual testing
         //candidateSpriteRenderer.enabled = true;
         //WalkToChair();
         //WalkToDoor();
     }
 
-    public void SpawnCandidateImage() {
-        var candidate = candidateManager.GetCurrentCandidate();
+    public void SpawnCandidateImage(CandidateInstance currentCandidate) {
 
-        candidateSpriteRenderer.sprite = candidate.CurrentVariant.fullBodySprite;
+        candidateSpriteRenderer.sprite = currentCandidate.CurrentVariant.fullBodySprite;
         candidateSpriteRenderer.enabled = true;
 
         candidateTransform.position = doorTarget.position;
@@ -57,6 +55,7 @@ public class CandidatePhysicalManager : MonoBehaviour {
         if (!isWalking) {
             StartCoroutine(WalkToDoorSequence());
         }
+        candidateSpriteRenderer.enabled = false;
     }
 
     private IEnumerator WalkToChairSequence() {
