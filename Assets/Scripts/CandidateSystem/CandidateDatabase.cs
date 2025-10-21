@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 [CreateAssetMenu(fileName = "CandidateDatabase", menuName = "Scriptable Objects/CandidateDatabase")]
 public class CandidateDatabase : ScriptableObject {
@@ -18,5 +19,10 @@ public class CandidateDatabase : ScriptableObject {
         return null;
     }
 
-
+    public CandidateInstance CreateRandomCandidateInstance() {
+        Candidate candidate = GetRandomCandidate();
+        if (candidate == null) return null;
+        CandidateVariant variant = candidate.GetRandomVariant();
+        return new CandidateInstance(candidate, variant);
+    }
 }
