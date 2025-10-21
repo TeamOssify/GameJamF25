@@ -1,4 +1,6 @@
-﻿using Eflatun.SceneReference;
+﻿using System.Linq;
+
+using Eflatun.SceneReference;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,10 +13,9 @@ public class LoadEventChannelSO : ScriptableObject {
         => RaiseEvent(new[] { locationToLoad }, showLoadingScreen);
 
     public void RaiseEvent(SceneReference[] locationsToLoad, bool showLoadingScreen) {
-        if (OnLoadingRequested is null) {
-            Debug.LogWarning("A scene load was requested, but no listeners were found on the scene load action!");
-            return;
-        }
+        Debug.Assert(locationsToLoad != null, "A scene load was requestioned with a null array of locations to load!");
+        Debug.Assert(locationsToLoad.All(x => x != null), "A scene load was requested,but the array of locations to load contains 1 or more null scenes!");
+        Debug.Assert(OnLoadingRequested != null, "A scene load was requested, but no listeners were found on the scene load action!");
 
         OnLoadingRequested.Invoke(locationsToLoad, showLoadingScreen);
     }
