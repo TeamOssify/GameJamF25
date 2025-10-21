@@ -20,9 +20,9 @@ public class CandidateDatabase : ScriptableObject {
     }
 
     public CandidateInstance CreateRandomCandidateInstance() {
-        Candidate candidate = GetRandomCandidate();
+        var candidate = GetRandomCandidate();
         if (candidate == null) return null;
-        CandidateVariant variant = candidate.GetRandomVariant();
+        var variant = candidate.GetRandomVariant();
         return new CandidateInstance(candidate, variant);
     }
 }
