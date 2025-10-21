@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CandidateEnums : MonoBehaviour {
+public class CandidateDataStructures : MonoBehaviour {
     public enum CandidateType {
         Human,
         NotHuman
