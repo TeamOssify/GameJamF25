@@ -247,11 +247,6 @@ dotnet_naming_style.prefix_s_.required_suffix =
 dotnet_naming_style.prefix_s_.word_separator = 
 dotnet_naming_style.prefix_s_.capitalization = camel_case
 
-dotnet_naming_style.const.required_prefix = 
-dotnet_naming_style.const.required_suffix = 
-dotnet_naming_style.const.word_separator = _
-dotnet_naming_style.const.capitalization = all_upper
-
 # Microsoft .NET properties
 csharp_style_namespace_declarations = file_scoped
 
