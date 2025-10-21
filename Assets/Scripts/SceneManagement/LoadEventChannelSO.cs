@@ -7,6 +7,9 @@ using UnityEngine.Events;
 public class LoadEventChannelSO : ScriptableObject {
     public UnityAction<SceneReference[], bool> OnLoadingRequested;
 
+    public void RaiseEvent(SceneReference locationToLoad, bool showLoadingScreen)
+        => RaiseEvent(new[] { locationToLoad }, showLoadingScreen);
+
     public void RaiseEvent(SceneReference[] locationsToLoad, bool showLoadingScreen) {
         if (OnLoadingRequested is null) {
             Debug.LogWarning("A scene load was requested, but no listeners were found on the scene load action!");
