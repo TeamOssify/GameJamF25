@@ -50,4 +50,8 @@ public class CandidateManager : MonoBehaviour {
     public CandidateInstance GetCurrentCandidate() {
         return currentCandidate;
     }
+
+    public List<CandidateInstance> GetInterviewedCandidates() {
+        return interviewedCandidates;
+    }
 }
