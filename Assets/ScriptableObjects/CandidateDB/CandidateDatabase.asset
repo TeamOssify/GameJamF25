@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe83d034645ef247999cc1de33ff785, type: 3}
   m_Name: CandidateDatabase
   m_EditorClassIdentifier: Assembly-CSharp::CandidateDatabase
-  allCandidates: []
-  bodyLanguages: []
+  allCandidates:
+  - {fileID: 11400000, guid: 912be53287a3a0542bb4348af34cac24, type: 2}
+  - {fileID: 0}
+  bodyLanguages:
+  - {fileID: 11400000, guid: 2589b59852759394b93f067957f165f0, type: 2}

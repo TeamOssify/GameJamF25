@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TurtleEvilResponse
   m_EditorClassIdentifier: Assembly-CSharp::BodyLanguageBehavior
   behaviorName: Gurt
-  type: 0
-  frequency: 15
+  type: 1
+  frequency: 0
   duration: 0.5
   frame: {fileID: 0}
