@@ -5,11 +5,10 @@ using TMPro;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
-    [SerializeField] private GameObject daysHighScoreObject;
+    [SerializeField] private TextMeshProUGUI daysHighScoreText;
 
     private void Awake() {
         var daysHighScore = PlayerPrefs.GetInt(Constants.PlayerPrefsKeys.HIGH_SCORE);
-        var daysHighScoreText = daysHighScoreObject.GetComponent<TextMeshProUGUI>();
         daysHighScoreText.text = string.Format(CultureInfo.InvariantCulture, daysHighScoreText.text, daysHighScore);
     }
 

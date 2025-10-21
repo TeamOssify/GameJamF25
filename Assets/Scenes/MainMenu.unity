@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7a15a64f345ffaf1bcb42a1a653af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  daysHighScoreObject: {fileID: 1863992881}
+  daysHighScoreText: {fileID: 1863992883}
 --- !u!4 &482473272
 Transform:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 946076367}
   - component: {fileID: 946076366}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Play Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 1091348093}
   - component: {fileID: 1091348092}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Exit Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
