@@ -5,7 +5,10 @@ using UnityEngine.UIElements;
 
 public class CandidateManager : MonoBehaviour {
     [SerializeField]
-    public CandidateDatabase db;
+    private CandidateDatabase db;
+
+    [SerializeField]
+    public GameObject candidateWorld;
 
     private CandidateInstance currentCandidate;
     private List<CandidateInstance> interviewedCandidates = new List<CandidateInstance>();
@@ -26,11 +29,15 @@ public class CandidateManager : MonoBehaviour {
         currentCandidate = db.CreateRandomCandidateInstance();
 
         if (currentCandidate != null) {
-
+            BringInCandidate(currentCandidate);
         }
     }
 
     void BringInCandidate(CandidateInstance candidate) {
 
+    }
+
+    public CandidateInstance GetCurrentCandidate() {
+        return currentCandidate;
     }
 }
