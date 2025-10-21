@@ -58,8 +58,9 @@ public sealed class SceneLoader : MonoBehaviour {
         }
 
         _scenesToLoadAsyncOperations[0].completed += SetActiveScene;
+
+        loadingInterface.SetActive(showLoadingScreen);
         if (showLoadingScreen) {
-            loadingInterface.SetActive(true);
             StartCoroutine(TrackLoadingProgress());
         }
         else {
