@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9a87d9e1bd2874f8da1bd31cf50f91, type: 3}
-  m_Name: TestQuestion
-  m_EditorClassIdentifier: Assembly-CSharp::Question
-  questionid: 1
-  questionText: Have you ever spared a pig or a cow, because it begged you for its
-    life?
+  m_Script: {fileID: 11500000, guid: f3142af6d262e1c4198f9320b17c7df3, type: 3}
+  m_Name: Gurt
+  m_EditorClassIdentifier: Assembly-CSharp::BodyLanguageBehavior
+  behaviorName: Gurt
+  type: 0
+  frequency: 15
+  duration: 0.5
+  frame: {fileID: 0}

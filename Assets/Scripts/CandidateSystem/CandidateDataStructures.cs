@@ -20,5 +20,13 @@ public class CandidateEnums : MonoBehaviour {
 
         public BodyLanguageBehavior responsiveBodyLanguage;
     }
-    
+
+    [System.Serializable]
+    public class CandidateStats {
+        public string firstName;
+        public string lastName;
+        public int age;
+        public string heightFt;
+        public float weightLbs;
+    }
 }
