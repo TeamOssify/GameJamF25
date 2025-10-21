@@ -23,8 +23,8 @@ MonoBehaviour:
     heightFt: 6'2
     weightLbs: 400
   questionResponses:
-  - question: {fileID: 0}
-    responseText: 
+  - question: {fileID: 11400000, guid: 2aebdfd819408164fb88520c43ef7e54, type: 2}
+    responseText: No i wouldnt flip it over becasue its a waste of time
     responsiveBodyLanguage: {fileID: 0}
   passiveBodyLanguages:
   - {fileID: 0}
