@@ -1,0 +1,106 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "Human": {
+      "description": "Human dialog.",
+      "type": "object",
+      "properties": {
+        "Intro": {
+          "description": "Intro dialog.",
+          "type": "array",
+          "items": {
+            "description": "A sequence of dialog entries.",
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "Tree": {
+                "description": "The tree of dialog entries to be played for this type of dialog.",
+                "type": "array",
+                "items": {
+                  "description": "An entry of dialog from either the player or the candidate.",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "Label": {
+                      "description": "Label used for dialog flow control.",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "Candidate": {
+                      "description": "The dialog that the candidate will say. Mutually exclusive with Player.",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "BodyLanguage": {
+                      "description": "Candidate body language to be displayed while the text block for this entry appears",
+                      "enum": [
+                        "None",
+                        "Blink",
+                        "Shutter"
+                      ]
+                    },
+                    "Player": {
+                      "description": "The dialog that the player will say. Mutually exclusive with Candidate.",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "PlayerResponses": {
+                      "description": "The responses the player can choose from, paired with the label of the entry to jump to.",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "additionalProperties": {
+                        "type": [
+                          "string"
+                        ]
+                      }
+                    },
+                    "Stop": {
+                      "description": "Stop advancing the dialog tree after this entry.",
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TurtleQuestion": {
+          "description": "Turtle question dialog.",
+          "type": "array",
+          "items": {
+            "description": "A sequence of dialog entries.",
+            "$ref": "#/properties/Human/properties/Intro/items"
+          }
+        }
+      }
+    },
+    "NonHuman": {
+      "description": "Non-human dialog.",
+      "type": "object",
+      "properties": {
+        "Intro": {
+          "description": "Intro dialog.",
+          "$ref": "#/properties/Human/properties/Intro"
+        },
+        "TurtleQuestion": {
+          "description": "Turtle question dialog.",
+          "$ref": "#/properties/Human/properties/TurtleQuestion"
+        }
+      }
+    }
+  }
+}
