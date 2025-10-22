@@ -38,7 +38,6 @@ public class CandidatePhysicalManager : MonoBehaviour {
     }
 
     public void SpawnCandidateImage(CandidateInstance currentCandidate) {
-
         candidateSpriteRenderer.sprite = currentCandidate.CurrentVariant.fullBodySprite;
         candidateSpriteRenderer.enabled = true;
 
@@ -55,7 +54,6 @@ public class CandidatePhysicalManager : MonoBehaviour {
         if (!isWalking) {
             StartCoroutine(WalkToDoorSequence());
         }
-        candidateSpriteRenderer.enabled = false;
     }
 
     private IEnumerator WalkToChairSequence() {
@@ -72,6 +70,7 @@ public class CandidatePhysicalManager : MonoBehaviour {
         yield return StartCoroutine(Walk(initialWalkTarget.position));
         yield return new WaitForSeconds(pauseBetweenMovement);
         yield return StartCoroutine(Walk(doorTarget.position));
+        candidateSpriteRenderer.enabled = false;
     }
     private IEnumerator Walk(Vector3 target) {
         isWalking = true;

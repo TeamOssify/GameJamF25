@@ -1570,6 +1570,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 346357617}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: KickCurrentCandidate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CandidateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5461,6 +5489,34 @@ PrefabInstance:
     - target: {fileID: 7928740329373683298, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 346357617}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextCandidate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CandidateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573901477249669780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

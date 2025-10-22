@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-using UnityEngine.UIElements;
-
 public class CandidateManager : MonoBehaviour {
     [SerializeField]
     private CandidateDatabase db;
@@ -11,7 +9,7 @@ public class CandidateManager : MonoBehaviour {
     private CandidatePhysicalManager candidatePhysicalManager;
 
     private CandidateInstance currentCandidate;
-    private List<CandidateInstance> interviewedCandidates = new List<CandidateInstance>();
+    private List<CandidateInstance> interviewedCandidates = new();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,13 +34,14 @@ public class CandidateManager : MonoBehaviour {
     private void BringInCandidate() {
         candidatePhysicalManager.SpawnCandidateImage(currentCandidate);
         candidatePhysicalManager.WalkToChair();
-
     }
+
     public void KickCurrentCandidate() {
         if (currentCandidate != null) {
             currentCandidate.HasBeenInterviewed = true;
             interviewedCandidates.Add(currentCandidate);
         }
+
         candidatePhysicalManager.WalkToDoor();
     }
 

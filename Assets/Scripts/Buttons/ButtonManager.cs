@@ -19,6 +19,10 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
         _homePosition = transform.position;
         _clickPosition = transform.position - new Vector3(0, clickDownAmount, 0);
 
+        EnsureCameraRaycaster();
+    }
+
+    private static void EnsureCameraRaycaster() {
         var physicsRaycaster = FindFirstObjectByType<PhysicsRaycaster>();
         if (!physicsRaycaster)
         {
