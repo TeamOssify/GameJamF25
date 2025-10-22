@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
   variantId: 1
   candidateType: 0
-  fullBodySprite: {fileID: 0}
-  portraitSprite: {fileID: 0}
+  fullBodySprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
+  portraitSprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
   baseStats:
     firstName: Chuck
     lastName: Echeese
