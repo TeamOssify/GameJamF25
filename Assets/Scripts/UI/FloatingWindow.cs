@@ -3,9 +3,12 @@
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public sealed class FloatingWindow : MonoBehaviour {
-    [SerializeField] private TextMeshProUGUI hideButtonText;
+    [SerializeField] private Sprite visibleSprite;
+    [SerializeField] private Sprite collapsedSprite;
+    [SerializeField] private Image collapseButton;
     [SerializeField] private GameObject scrollContainer;
 
     private Canvas _canvas;
@@ -44,7 +47,7 @@ public sealed class FloatingWindow : MonoBehaviour {
     public void ToggleWindowVisible() {
         var shouldShow = !scrollContainer.activeSelf;
 
-        hideButtonText.text = shouldShow ? "v" : "-";
+        collapseButton.sprite = shouldShow ? visibleSprite : collapsedSprite;
         scrollContainer.SetActive(shouldShow);
 
         StartCoroutine(DeferMoveWindow(Vector2.zero));
