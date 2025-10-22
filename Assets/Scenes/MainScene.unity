@@ -733,23 +733,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3544654315689987570, guid: 5dcd3d476b064ab47be0f298f8597d6a, type: 3}
   m_PrefabInstance: {fileID: 3137586789539304787}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &449431335 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-  m_PrefabInstance: {fileID: 2473129075543781294}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &449431337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449431335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c99a7a9607a32364c92d34a36f08f633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
 --- !u!1 &502596074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,10 +1479,6 @@ PrefabInstance:
     - target: {fileID: 3479900487554456917, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_Name
       value: SendAwayButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7717552264794297495, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7928740329373683298, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5340,6 +5319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CallNewButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4442918650281260845, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.055110008
+      objectReference: {fileID: 0}
     - target: {fileID: 7717552264794297495, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -5388,9 +5371,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 449431337}
     - targetCorrespondingSourceObject: {fileID: 2261702739582065960, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
