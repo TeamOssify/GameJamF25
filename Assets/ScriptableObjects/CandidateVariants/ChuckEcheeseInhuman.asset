@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
+  m_Name: ChuckEcheeseInhuman
+  m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
+  variantId: 2
+  candidateType: 1
+  fullBodySprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
+  portraitSprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
+  baseStats:
+    firstName: Chuck
+    lastName: Echeese
+    age: 21
+    heightFt: 6'2
+    weightLbs: 400
+  questionResponses:
+  - question: {fileID: 11400000, guid: 2aebdfd819408164fb88520c43ef7e54, type: 2}
+    responseText: No i wouldnt flip it over becasue its a waste of time
+    responsiveBodyLanguage: {fileID: 11400000, guid: 84d16ecb23c9e56489aeae32fe82daf2, type: 2}
+  - question: {fileID: 11400000, guid: 2aebdfd819408164fb88520c43ef7e54, type: 2}
+    responseText: No i wouldnt flip it over becasue its a waste of time
+    responsiveBodyLanguage: {fileID: 11400000, guid: 84d16ecb23c9e56489aeae32fe82daf2, type: 2}
+  passiveBodyLanguages:
+  - {fileID: 0}
+  physicalDiscrepancies:
+  - is 400 pounds but doesnt look like it
+  - has stinky green flies aura
