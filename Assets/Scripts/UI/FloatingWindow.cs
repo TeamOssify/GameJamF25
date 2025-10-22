@@ -1,6 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+
+using TMPro;
+
+using UnityEngine;
 
 public sealed class FloatingWindow : MonoBehaviour {
+    [SerializeField] private TextMeshProUGUI hideButtonText;
+    [SerializeField] private GameObject scrollContainer;
+
     private Canvas _canvas;
     private RectTransform _canvasTransform;
     private RectTransform _windowTransform;
@@ -14,8 +21,8 @@ public sealed class FloatingWindow : MonoBehaviour {
     public void MoveWindow(Vector2 delta) {
         var newPos = _windowTransform.anchoredPosition + (delta / _canvas.scaleFactor);
 
-        var windowMin = _windowTransform.rect.size / 2;
-        var windowMax = _canvasTransform.rect.size - (_windowTransform.rect.size / 2);
+        var windowMin = new Vector2(_windowTransform.rect.size.x / 2, 0);
+        var windowMax = _canvasTransform.rect.size - new Vector2(_windowTransform.rect.size.x / 2, _windowTransform.rect.size.y);
 
         if (newPos.x > windowMax.x) {
             newPos.x = windowMax.x;
@@ -32,5 +39,19 @@ public sealed class FloatingWindow : MonoBehaviour {
         }
 
         _windowTransform.anchoredPosition = newPos;
+    }
+
+    public void ToggleWindowVisible() {
+        var shouldShow = !scrollContainer.activeSelf;
+
+        hideButtonText.text = shouldShow ? "v" : "-";
+        scrollContainer.SetActive(shouldShow);
+
+        StartCoroutine(DeferMoveWindow(Vector2.zero));
+    }
+
+    private IEnumerator DeferMoveWindow(Vector2 delta) {
+        yield return null;
+        MoveWindow(delta);
     }
 }
