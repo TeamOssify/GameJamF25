@@ -16,7 +16,7 @@ public class ShiftTimer : MonoBehaviour {
     public UnityEvent OnTimerEnd;
 
     private void Awake() {
-        timerText.text = TimeSpan.FromSeconds(shiftDuration).ToString(@"m\:ss");
+        SetTimerText(shiftDuration);
     }
 
     public void StartTimer() {
@@ -36,10 +36,14 @@ public class ShiftTimer : MonoBehaviour {
             _currentTime = 0;
         }
 
-        timerText.text = TimeSpan.FromSeconds(_currentTime).ToString(@"m\:ss");
+        SetTimerText(_currentTime);
 
         if (!_timerActive) {
             OnTimerEnd?.Invoke();
         }
+    }
+
+    private void SetTimerText(float time) {
+        timerText.text = TimeSpan.FromSeconds(time).ToString(@"m\:ss");
     }
 }

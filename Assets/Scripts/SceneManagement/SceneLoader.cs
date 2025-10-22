@@ -23,7 +23,6 @@ public sealed class SceneLoader : MonoBehaviour {
     [SerializeField] private LoadEventChannelSO loadEventChannel;
 
     private readonly List<AsyncOperation> _scenesToLoadAsyncOperations = new();
-
     private readonly List<Scene> _scenesToUnload = new();
 
     private SceneReference _activeScene;
