@@ -1,10 +1,12 @@
+using System.Collections;
+
 using UnityEngine;
 using System.Collections.Generic;
 
 public class CandidateManager : MonoBehaviour {
     [SerializeField] private CandidateDatabase db;
     [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
-
+    [SerializeField] private ShiftManager shiftManager;
     private CandidateInstance _currentCandidate;
     private readonly HashSet<CandidateInstance> _interviewedCandidates = new();
 
@@ -17,8 +19,12 @@ public class CandidateManager : MonoBehaviour {
 
         if (_currentCandidate != null) {
             BringInCandidate();
+            if (_interviewedCandidates.Count == 0) {
+                shiftManager.StartShift();
+            }
         }
     }
+
 
     private void BringInCandidate() {
         candidatePhysicalManager.SpawnCandidateImage(_currentCandidate);
@@ -29,9 +35,14 @@ public class CandidateManager : MonoBehaviour {
         if (_currentCandidate != null) {
             _currentCandidate.HasBeenInterviewed = true;
             _interviewedCandidates.Add(_currentCandidate);
+
         }
 
         candidatePhysicalManager.WalkToDoor();
+
+        //need wait until candidate leaves to end shift
+
+        shiftManager.CheckShiftEnd();
     }
 
     public CandidateInstance GetCurrentCandidate() {
