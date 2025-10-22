@@ -1310,6 +1310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShiftManager
   moneyManager: {fileID: 1527976503}
   shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
+  shiftTimer: {fileID: 1438331577}
   loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
   reportScene:
     asset: {fileID: 102900000, guid: 483777ac032a218459885b4f8f1c7c67, type: 3}
@@ -1653,7 +1654,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -4198,7 +4199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4388702978265085663, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388702978265085663, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4871,10 +4872,6 @@ PrefabInstance:
     - target: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 241.38405
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -510.44003
       objectReference: {fileID: 0}
     - target: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5699,7 +5696,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
