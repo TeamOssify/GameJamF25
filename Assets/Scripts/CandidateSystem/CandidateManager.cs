@@ -33,13 +33,12 @@ public class CandidateManager : MonoBehaviour {
         }
     }
 
-    void BringInCandidate() {
+    private void BringInCandidate() {
         candidatePhysicalManager.SpawnCandidateImage(currentCandidate);
         candidatePhysicalManager.WalkToChair();
 
     }
-
-    void KickCurrentCandidate() {
+    public void KickCurrentCandidate() {
         if (currentCandidate != null) {
             currentCandidate.HasBeenInterviewed = true;
             interviewedCandidates.Add(currentCandidate);

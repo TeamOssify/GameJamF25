@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour {
 
-    [SerializeField] private int money;
-
+    [SerializeField] private MoneyData money;
     public void AddMoney(int amount) {
-        money += amount;
+        money.currentBalance += amount;
     }
 
     public void SubtractMoney(int amount) {
-        money -= amount;
+        money.currentBalance -= amount;
     }
 
     public void SetMoney(int amount) {
-        money = amount;
+        money.currentBalance = amount;
     }
 }
