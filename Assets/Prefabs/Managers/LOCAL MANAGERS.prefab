@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShiftManager
   moneyManager: {fileID: 8755794582767119553}
   shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
-  shiftTimer: {fileID: 0}
+  shiftTimer: {fileID: 2293661282723320965}
   loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
   reportScene:
     asset: {fileID: 102900000, guid: 483777ac032a218459885b4f8f1c7c67, type: 3}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fd34d31a8421c44958daaa23aaee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
-  shiftDuration: 180
+  shiftDuration: 180.9
   timerText: {fileID: 0}
   OnTimerEnd:
     m_PersistentCalls:

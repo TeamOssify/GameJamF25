@@ -7,7 +7,12 @@ using UnityEngine.EventSystems;
 public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler {
     [Range(0, 0.01f)]
     [SerializeField]
-    private float clickDownAmount = 0.004f;
+    private float clickDownAmount = 0.005f;
+
+    [Range(0, 1)]
+    [SerializeField]
+    private float clickSpeed = 0.25f;
+
     private Vector3 _homePosition;
     private Vector3 _clickPosition;
     private Vector3 _lerpTarget;
@@ -24,8 +29,7 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
 
     private static void EnsureCameraRaycaster() {
         var physicsRaycaster = FindFirstObjectByType<PhysicsRaycaster>();
-        if (!physicsRaycaster)
-        {
+        if (!physicsRaycaster) {
             Camera.main!.gameObject.AddComponent<PhysicsRaycaster>();
         }
     }
@@ -63,14 +67,13 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
     }
 
     private IEnumerator LerpPosition() {
-        while (true)
-        {
+        while (true) {
             if (Mathf.Abs((transform.position - _lerpTarget).y) < clickDownAmount / 50) {
                 _isLerping = false;
                 yield break;
             }
 
-            transform.position = Vector3.Lerp(transform.position, _lerpTarget, 0.2f);
+            transform.position = Vector3.Lerp(transform.position, _lerpTarget, clickSpeed);
             yield return null;
         }
     }

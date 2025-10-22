@@ -127,6 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17922cf3e68a49508337ec5f6603795f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
+  clickDownAmount: 0.0045
+  clickSpeed: 0.28
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2261702739582065960
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,8 +338,8 @@ Transform:
   m_GameObject: {fileID: 2898719604686204088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05044079, y: 0.046609998, z: -0.04971981}
-  m_LocalScale: {x: 0.06405059, y: 0.008139594, z: 0.060621988}
+  m_LocalPosition: {x: -0.05044079, y: 0.0455, z: -0.04971981}
+  m_LocalScale: {x: 0.06405059, y: 0.0065002805, z: 0.060621988}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7928740329373683298}
