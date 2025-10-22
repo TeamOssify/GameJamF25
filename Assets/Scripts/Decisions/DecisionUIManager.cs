@@ -1,16 +1,14 @@
+using TMPro;
+
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DecisionUIManager : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+public class DecisionUIManager : MonoBehaviour {
+    [SerializeField] private RectTransform decisionUI;
+    [SerializeField] private GameObject candidateCell;
+    // out position 676.211x
+    // in position 1125x
+    void Start() {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
