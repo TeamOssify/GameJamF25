@@ -483,3 +483,4 @@ Build/*
 .vscode/
 Assembly-CSharp.csproj
 *.sln
+*.json
