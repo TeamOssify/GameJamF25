@@ -140,10 +140,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9411c01e4b24fc1ad012588a5a3e28a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CandidateMovement
+  m_EditorClassIdentifier: Assembly-CSharp::CandidatePhysicalManager
   candidateSpriteRenderer: {fileID: 42092382}
   candidateTransform: {fileID: 42092383}
-  candidateManager: {fileID: 346357617}
   speed: 0.5
   walkCurve:
     serializedVersion: 2
@@ -694,7 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CandidateManager
   db: {fileID: 11400000, guid: 3aeb83a1a8db4604e9530d5eb9fc3b54, type: 2}
-  candidateWorld: {fileID: 42092380}
+  candidatePhysicalManager: {fileID: 0}
 --- !u!1 &353525012
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,15 +798,15 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 74f76524caabcb042bc9e7f8cc96b67d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9d0ef5e86f5a1fb4badb169660b48ac7, type: 2}
     - target: {fileID: -1461304994638716399, guid: 74f76524caabcb042bc9e7f8cc96b67d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9d0ef5e86f5a1fb4badb169660b48ac7, type: 2}
     - target: {fileID: -678588488315902003, guid: 74f76524caabcb042bc9e7f8cc96b67d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9d0ef5e86f5a1fb4badb169660b48ac7, type: 2}
     - target: {fileID: -516098083770646512, guid: 74f76524caabcb042bc9e7f8cc96b67d, type: 3}
@@ -5433,7 +5432,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 7633742406413705785, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}, insertIndex: -1, addedObject: {fileID: 346357616}}]
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7633742406413705785, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 346357616}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
 --- !u!4 &2896187697971957955 stripped
