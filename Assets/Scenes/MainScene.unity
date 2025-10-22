@@ -2238,9 +2238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fd34d31a8421c44958daaa23aaee89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  timerEnded: 0
   shiftDuration: 180
   timerText: {fileID: 248705359}
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1457136754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 182618149025074219, guid: 73f5afe66b06703438de92bfa3108fa5, type: 3}

@@ -25,7 +25,6 @@ public class CandidateManager : MonoBehaviour {
         }
     }
 
-
     private void BringInCandidate() {
         candidatePhysicalManager.SpawnCandidateImage(_currentCandidate);
         candidatePhysicalManager.WalkToChair();
@@ -40,8 +39,7 @@ public class CandidateManager : MonoBehaviour {
 
         candidatePhysicalManager.WalkToDoor();
 
-        //need wait until candidate leaves to end shift
-
+        // need wait until candidate leaves to end shift
         shiftManager.CheckShiftEnd();
     }
 
