@@ -648,6 +648,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229194098}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &236344963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7362636585400467613, guid: 2ac7746fb8c73dc479b9838cc920a13a, type: 3}
+  m_PrefabInstance: {fileID: 1139989019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &236344966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236344963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fd34d31a8421c44958daaa23aaee89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
+  shiftDuration: 180
+  timerText: {fileID: 0}
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &248705357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShiftManager
   moneyManager: {fileID: 1527976503}
   shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
-  shiftTimer: {fileID: 1438331577}
+  shiftTimer: {fileID: 0}
   loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
   reportScene:
     asset: {fileID: 102900000, guid: 483777ac032a218459885b4f8f1c7c67, type: 3}
@@ -2061,6 +2095,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7362636585400467613, guid: 2ac7746fb8c73dc479b9838cc920a13a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 236344966}
     - targetCorrespondingSourceObject: {fileID: 7801899922272313541, guid: 2ac7746fb8c73dc479b9838cc920a13a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -2256,7 +2293,6 @@ GameObject:
   - component: {fileID: 1438331574}
   - component: {fileID: 1438331576}
   - component: {fileID: 1438331575}
-  - component: {fileID: 1438331577}
   m_Layer: 5
   m_Name: ShiftTimer
   m_TagString: Untagged
@@ -2322,23 +2358,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438331573}
   m_CullTransparentMesh: 1
---- !u!114 &1438331577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438331573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9fd34d31a8421c44958daaa23aaee89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
-  shiftDuration: 180
-  timerText: {fileID: 248705359}
-  OnTimerEnd:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1457136754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 182618149025074219, guid: 73f5afe66b06703438de92bfa3108fa5, type: 3}

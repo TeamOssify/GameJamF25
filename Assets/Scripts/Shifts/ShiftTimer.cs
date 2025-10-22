@@ -7,13 +7,17 @@ using UnityEngine.Events;
 
 public class ShiftTimer : MonoBehaviour {
     [SerializeField] private float shiftDuration = 180.0f;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshPro timerText;
 
     private float _currentTime;
     private bool _timerActive;
 
     public bool TimerEnded => !_timerActive;
     public UnityEvent OnTimerEnd;
+
+    private void Awake() {
+        timerText.text = TimeSpan.FromSeconds(shiftDuration).ToString(@"m\:ss");
+    }
 
     public void StartTimer() {
         _currentTime = shiftDuration;
@@ -32,7 +36,7 @@ public class ShiftTimer : MonoBehaviour {
             _currentTime = 0;
         }
 
-        timerText.text = TimeSpan.FromSeconds(_currentTime).ToString(@"mm\:ss");
+        timerText.text = TimeSpan.FromSeconds(_currentTime).ToString(@"m\:ss");
 
         if (!_timerActive) {
             OnTimerEnd?.Invoke();
