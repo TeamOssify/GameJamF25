@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Candidate
   characterId: 2
   characterName: Lamar James
-  humanVariant: {fileID: 11400000, guid: be2259d57f25135448eccc883e9ccb82, type: 2}
-  nonHumanVariant: {fileID: 11400000, guid: b4b8b36ee37dbb84580a9c60bcc2d4a8, type: 2}
+  humanVariant: {fileID: 11400000, guid: 54641e2593bd88e4b897ecb95f43bcb6, type: 2}
+  nonHumanVariant: {fileID: 11400000, guid: 3262b961ab4a04d4d982b98b9cd2014a, type: 2}

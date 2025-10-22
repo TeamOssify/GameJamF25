@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
   m_Name: LamarJamesHuman
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  variantId: 2
-  candidateType: 1
-  fullBodySprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
-  portraitSprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
+  variantId: 3
+  candidateType: 0
+  fullBodySprite: {fileID: 21300000, guid: cb53b57750d4d5b42b3bfe673d82c8da, type: 3}
+  portraitSprite: {fileID: 21300000, guid: cb53b57750d4d5b42b3bfe673d82c8da, type: 3}
   baseStats:
-    firstName: Chuck
-    lastName: Echeese
+    firstName: Lamar
+    lastName: James
     age: 21
     heightFt: 6'2
     weightLbs: 400
