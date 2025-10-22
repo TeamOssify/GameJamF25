@@ -1,27 +1,30 @@
-using NUnit.Framework;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 [CreateAssetMenu(fileName = "CandidateDatabase", menuName = "Scriptable Objects/CandidateDatabase")]
 public class CandidateDatabase : ScriptableObject {
     [Header("All Candidates")]
-    public List<Candidate> allCandidates = new List<Candidate>();
+    [SerializeField]
+    private Candidate[] allCandidates;
 
     [Header("Body Languages")]
-    public List<BodyLanguageBehavior> bodyLanguages = new List<BodyLanguageBehavior>();
+    [SerializeField]
+    private BodyLanguageBehavior[] bodyLanguages;
 
     public Candidate GetRandomCandidate() {
-        if (allCandidates.Count > 0) {
-            return allCandidates[Random.Range(0, allCandidates.Count)];
+        if (allCandidates.Length > 0) {
+            return allCandidates[Random.Range(0, allCandidates.Length)];
         }
+
         Debug.LogError("No candidates in database");
         return null;
     }
 
     public CandidateInstance CreateRandomCandidateInstance() {
         var candidate = GetRandomCandidate();
-        if (candidate == null) return null;
+        if (!candidate) {
+            return null;
+        }
+
         var variant = candidate.GetRandomVariant();
         return new CandidateInstance(candidate, variant);
     }

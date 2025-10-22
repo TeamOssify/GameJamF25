@@ -2,54 +2,43 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class CandidateManager : MonoBehaviour {
-    [SerializeField]
-    private CandidateDatabase db;
+    [SerializeField] private CandidateDatabase db;
+    [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
 
-    [SerializeField]
-    private CandidatePhysicalManager candidatePhysicalManager;
-
-    private CandidateInstance currentCandidate;
-    private List<CandidateInstance> interviewedCandidates = new();
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private CandidateInstance _currentCandidate;
+    private readonly HashSet<CandidateInstance> _interviewedCandidates = new();
 
     public void LoadNextCandidate() {
-        currentCandidate = db.CreateRandomCandidateInstance();
+        if (candidatePhysicalManager.IsCandidatePresent) {
+            return;
+        }
 
-        if (currentCandidate != null) {
+        _currentCandidate = db.CreateRandomCandidateInstance();
+
+        if (_currentCandidate != null) {
             BringInCandidate();
         }
     }
 
     private void BringInCandidate() {
-        candidatePhysicalManager.SpawnCandidateImage(currentCandidate);
+        candidatePhysicalManager.SpawnCandidateImage(_currentCandidate);
         candidatePhysicalManager.WalkToChair();
     }
 
     public void KickCurrentCandidate() {
-        if (currentCandidate != null) {
-            currentCandidate.HasBeenInterviewed = true;
-            interviewedCandidates.Add(currentCandidate);
+        if (_currentCandidate != null) {
+            _currentCandidate.HasBeenInterviewed = true;
+            _interviewedCandidates.Add(_currentCandidate);
         }
 
         candidatePhysicalManager.WalkToDoor();
     }
 
     public CandidateInstance GetCurrentCandidate() {
-        return currentCandidate;
+        return _currentCandidate;
     }
 
-    public List<CandidateInstance> GetInterviewedCandidates() {
-        return interviewedCandidates;
+    public IReadOnlyCollection<CandidateInstance> GetInterviewedCandidates() {
+        return _interviewedCandidates;
     }
 }

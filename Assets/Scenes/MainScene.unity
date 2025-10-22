@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CandidatePhysicalManager
   candidateSpriteRenderer: {fileID: 42092382}
   candidateTransform: {fileID: 42092383}
-  speed: 0.5
+  walkSpeed: 0.5
   walkCurve:
     serializedVersion: 2
     m_Curve:
@@ -1520,7 +1520,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2123593238849630973, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_text
-      value: Send
+      value: 'Kick
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2261702739582065960, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
       propertyPath: m_Name
