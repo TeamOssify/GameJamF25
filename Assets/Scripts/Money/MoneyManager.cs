@@ -11,6 +11,18 @@ public class MoneyManager : MonoBehaviour {
         money.currentBalance -= amount;
     }
 
+    public int GetBalance() {
+        return money.currentBalance;
+    }
+
+    public int GetCurrentRentCost() {
+        return money.rentAmount;
+    }
+
+    public int GetCurrentSalary() {
+        return money.baseSalaryPerCorrect;
+    }
+
     public void SetMoney(int amount) {
         money.currentBalance = amount;
     }
