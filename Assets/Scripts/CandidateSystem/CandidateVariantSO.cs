@@ -9,6 +9,7 @@ public class CandidateVariant : ScriptableObject {
 
     [Header("Appearance")]
     public Sprite fullBodySprite;
+    public Sprite backSprite;
     public Sprite portraitSprite;
 
     [Header("Stats")]

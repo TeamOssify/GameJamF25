@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
+  m_Name: JitHuman
+  m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
+  candidateType: 1
+  fullBodySprite: {fileID: 21300000, guid: 27fc25175d97b1a4aa237b980b8cf6fd, type: 3}
+  backSprite: {fileID: 21300000, guid: af93429b31e244e45b62626435b7a96f, type: 3}
+  portraitSprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
+  baseStats:
+    age: 21
+    heightFt: 6'2
+    weightLbs: 400
+  passiveBodyLanguages:
+  - {fileID: 0}
+  physicalDiscrepancies: []
