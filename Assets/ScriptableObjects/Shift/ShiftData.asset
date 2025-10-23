@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: ShiftData
   m_EditorClassIdentifier: Assembly-CSharp::ShiftData
   shiftNumber: 0
+  highestShiftNumber: 0
+  candidatesProcessedCorrectly: 0
+  candidatesProcessedIncorrectly: 0
