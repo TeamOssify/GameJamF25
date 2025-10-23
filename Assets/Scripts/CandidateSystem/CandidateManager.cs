@@ -25,6 +25,7 @@ public class CandidateManager : MonoBehaviour {
         if (_currentCandidate != null) {
             BringInCandidate();
             decisionUIManager.AddCandidate(_currentCandidate);
+            notesText.text = "";
             if (_interviewedCandidates.Count == 0) {
                 shiftManager.StartShift();
             }
@@ -39,11 +40,7 @@ public class CandidateManager : MonoBehaviour {
     public void KickCurrentCandidate() {
         if (_currentCandidate != null) {
             _currentCandidate.HasBeenInterviewed = true;
-
             _interviewedCandidates.Add(_currentCandidate);
-
-            _currentCandidate.PlayerNotes = notesText.text;
-            notesText.text = "";
         }
 
         candidatePhysicalManager.WalkToDoor();
@@ -58,5 +55,9 @@ public class CandidateManager : MonoBehaviour {
 
     public IReadOnlyCollection<CandidateInstance> GetInterviewedCandidates() {
         return _interviewedCandidates;
+    }
+
+    public void SaveNotes() {
+        _currentCandidate.PlayerNotes = notesText.text;
     }
 }
