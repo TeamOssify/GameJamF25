@@ -606,7 +606,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -2882,10 +2882,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 2114118773}},
-      {targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 1964165302}},
-      {targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 749376022}}]
-    m_AddedComponents: [{targetCorrespondingSourceObject: {fileID: 7688141957865028973, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 1934552981}}]
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2114118773}
+    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1964165302}
+    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 749376022}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7688141957865028973, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1934552981}
   m_SourcePrefab: {fileID: 100100000, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
 --- !u!224 &1934552975 stripped
 RectTransform:
@@ -2944,6 +2954,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 853917460}
     m_Modifications:
     - target: {fileID: 251056833535252203, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 251056833535252203, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
@@ -2974,6 +2988,10 @@ PrefabInstance:
     - target: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524529790048297479, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7784777096932995380, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3094,7 +3112,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
