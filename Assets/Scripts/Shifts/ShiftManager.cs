@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using Eflatun.SceneReference;
 
 using UnityEngine;
@@ -8,6 +10,7 @@ public class ShiftManager : MonoBehaviour {
     [SerializeField] private ShiftTimer shiftTimer;
     [SerializeField] private LoadEventChannelSO loadEventChannel;
     [SerializeField] private SceneReference reportScene;
+    [SerializeField] private CandidateManager candidateManager;
 
     //starts timer and increments shift number
     public void StartShift() {
@@ -25,6 +28,21 @@ public class ShiftManager : MonoBehaviour {
 
     // switches the scene to the report screen
     public void EndShift() {
+        var interviewedCandidates = candidateManager.GetInterviewedCandidates();
+        int correct = 0;
+        int incorrect = 0;
+        bool undecidedFlag = false;
+
+        foreach (var candidate in interviewedCandidates) {
+            if (candidate.PlayerDecision == null) {
+                undecidedFlag = true;
+                Debug.Log("Cannot end shift because there is undecided candidates");
+                return;
+            }
+            if(candidate.IsHuman() && candidate.PlayerDecision == true) {
+                correct++;
+            }
+        }
         loadEventChannel.RaiseEvent(reportScene, false);
     }
 }
