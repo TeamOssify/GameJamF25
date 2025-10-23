@@ -404,7 +404,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731827931}
   m_HandleRect: {fileID: 1731827930}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2100,6 +2100,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2095060864}
     - target: {fileID: 4184475561494819137, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: notesText
+      value: 
+      objectReference: {fileID: 518461058}
+    - target: {fileID: 4184475561494819137, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: decisionUIManager
       value: 
       objectReference: {fileID: 1159017890}
@@ -2107,6 +2111,10 @@ PrefabInstance:
       propertyPath: candidatePhysicalManager
       value: 
       objectReference: {fileID: 42092381}
+    - target: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: notesText
+      value: 
+      objectReference: {fileID: 518461058}
     - target: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: decisionUI
       value: 

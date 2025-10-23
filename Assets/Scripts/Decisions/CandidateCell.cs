@@ -1,6 +1,7 @@
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CandidateCell : MonoBehaviour
@@ -10,13 +11,13 @@ public class CandidateCell : MonoBehaviour
     [SerializeField] private Image checkmarkImage;
     [SerializeField] private Image xImage;
 
-    private CandidateInstance _candidateData;
+    public UnityEvent updateNotes;
 
+    private CandidateInstance _candidateData;
     public void Initialize(CandidateInstance candidate) {
         _candidateData = candidate;
         portraitImage.sprite = candidate.CurrentVariant.portraitSprite;
         nameText.text = candidate.GetFullName();
-
     }
 
     public void OnPassToggled() {
@@ -31,7 +32,6 @@ public class CandidateCell : MonoBehaviour
 
             _candidateData.PlayerDecision = true;
         }
-        Debug.Log("passed");
     }
 
     public void OnFailToggled() {
@@ -46,12 +46,10 @@ public class CandidateCell : MonoBehaviour
 
             _candidateData.PlayerDecision = false;
         }
-        Debug.Log("failed");
     }
 
     public void OnCellClicked() {
-        //open notes
-        Debug.Log("opening notes");
+        updateNotes?.Invoke();
     }
 
     public CandidateInstance Get_candidateData() {

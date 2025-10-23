@@ -7,6 +7,7 @@ public class DecisionUIManager : MonoBehaviour {
     [SerializeField] private GameObject decisionUI;
     [SerializeField] private GameObject candidateCell;
     [SerializeField] private GameObject cellContainer;
+    [SerializeField] private TMP_InputField notesText;
 
     private List<CandidateCell> _activeCells = new List<CandidateCell>();
 
@@ -16,6 +17,7 @@ public class DecisionUIManager : MonoBehaviour {
 
         if (cell != null) {
             cell.Initialize(candidate);
+            cell.updateNotes.AddListener(() => UpdateNotes(candidate));
             _activeCells.Add(cell);
         }
     }
@@ -29,5 +31,8 @@ public class DecisionUIManager : MonoBehaviour {
         _activeCells.Clear();
     }
 
+    private void UpdateNotes(CandidateInstance candidate) {
+        notesText.text = candidate.PlayerNotes;
+    }
 
 }

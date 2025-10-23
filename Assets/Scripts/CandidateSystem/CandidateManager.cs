@@ -3,11 +3,14 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 
+using TMPro;
+
 public class CandidateManager : MonoBehaviour {
     [SerializeField] private CandidateDatabase db;
     [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
     [SerializeField] private ShiftManager shiftManager;
     [SerializeField] private DecisionUIManager decisionUIManager;
+    [SerializeField] private TMP_InputField notesText;
 
     private CandidateInstance _currentCandidate;
     private readonly HashSet<CandidateInstance> _interviewedCandidates = new();
@@ -36,8 +39,11 @@ public class CandidateManager : MonoBehaviour {
     public void KickCurrentCandidate() {
         if (_currentCandidate != null) {
             _currentCandidate.HasBeenInterviewed = true;
+
             _interviewedCandidates.Add(_currentCandidate);
 
+            _currentCandidate.PlayerNotes = notesText.text;
+            notesText.text = "";
         }
 
         candidatePhysicalManager.WalkToDoor();
