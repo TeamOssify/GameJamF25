@@ -24,7 +24,7 @@ public class ShiftManager : MonoBehaviour {
     }
 
     // switches the scene to the report screen
-    private void EndShift() {
+    public void EndShift() {
         loadEventChannel.RaiseEvent(reportScene, false);
     }
 }

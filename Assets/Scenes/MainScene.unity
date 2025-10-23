@@ -1431,6 +1431,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4388702978265085663, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
   m_PrefabInstance: {fileID: 508855316}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1505490163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+  m_PrefabInstance: {fileID: 2896187697971957954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b247172674a318240b0b220c8a77f19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftManager
 --- !u!4 &1579502134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3183183011656406591, guid: 5dcd3d476b064ab47be0f298f8597d6a, type: 3}
@@ -2517,6 +2528,34 @@ PrefabInstance:
     - target: {fileID: 2548560545026897328, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
       propertyPath: m_Name
       value: End Shift Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1505490163}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndShift
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShiftManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827635973850499925, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3439846554716600832, guid: 11087c36896c4024ebe39589af8d09b9, type: 3}
       propertyPath: m_AnchoredPosition.y
