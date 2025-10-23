@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6010307707678670445}
   - component: {fileID: 7927547203116796890}
   - component: {fileID: 8155878894316114234}
-  - component: {fileID: 5133458315115344067}
+  - component: {fileID: 4018815894957795413}
   m_Layer: 5
-  m_Name: Dialog Message
+  m_Name: Dialog Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &5133458315115344067
+--- !u!114 &4018815894957795413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
