@@ -21,6 +21,6 @@ public class FailureUI : MonoBehaviour
     }
 
     public void ReturnToMenu() {
-        loadEventChannel.RaiseEvent(mainMenu, true);
+        loadEventChannel.RaiseEvent(mainMenu, SceneLoadType.LoadingScreen);
     }
 }
