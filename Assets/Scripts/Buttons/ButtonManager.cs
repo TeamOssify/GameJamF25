@@ -5,9 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler {
-    [Range(0, 0.01f)]
     [SerializeField]
-    private float clickDownAmount = 0.005f;
+    private Vector3 clickDelta = new(0, -0.0045f, 0);
 
     [Range(0, 1)]
     [SerializeField]
@@ -22,7 +21,7 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
 
     private void Awake() {
         _homePosition = transform.position;
-        _clickPosition = transform.position - new Vector3(0, clickDownAmount, 0);
+        _clickPosition = transform.position + clickDelta;
 
         EnsureCameraRaycaster();
     }
@@ -68,7 +67,7 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
 
     private IEnumerator LerpPosition() {
         while (true) {
-            if (Mathf.Abs((transform.position - _lerpTarget).y) < clickDownAmount / 50) {
+            if (Mathf.Abs((transform.position - _lerpTarget).sqrMagnitude) < clickDelta.sqrMagnitude / 80) {
                 _isLerping = false;
                 yield break;
             }
