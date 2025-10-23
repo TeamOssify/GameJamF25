@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: MoneyData
   m_EditorClassIdentifier: Assembly-CSharp::MoneyData
   currentBalance: 0
+  rentAmount: 50
+  baseSalaryPerCorrect: 15

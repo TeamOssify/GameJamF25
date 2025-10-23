@@ -22,7 +22,11 @@ public class ShiftReportUI : MonoBehaviour {
         correctProcessedText.text = "Correct: " + shiftData.candidatesProcessedCorrectly;
         incorrectProcessedText.text = "Incorrect: " + shiftData.candidatesProcessedIncorrectly;
         totalProcessedText.text = "Total: " + (shiftData.candidatesProcessedCorrectly + shiftData.candidatesProcessedIncorrectly);
+
         savingsValueText.text = moneyData.currentBalance.ToString();
+        rentCostText.text = moneyData.rentAmount.ToString();
+        salaryText.text = "Salary (" + shiftData.candidatesProcessedCorrectly + ")";
+        salaryValueText.text = (shiftData.candidatesProcessedCorrectly * moneyData.baseSalaryPerCorrect).ToString();
     }
 
     public void SleepButtonPressed() {
