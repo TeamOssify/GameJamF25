@@ -149,10 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
+  backgroundMusicEventChannel: {fileID: 11400000, guid: dd53e27a34c2c8748924adf6469665a5, type: 2}
   mainScene:
     asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
     guid: 99c9720ab356a0642a771bea13969a05
   daysHighScoreText: {fileID: 1863992883}
+  backgroundMusic: {fileID: 8300000, guid: 64abfc82383a570439444b9448aae03d, type: 3}
 --- !u!4 &482473272
 Transform:
   m_ObjectHideFlags: 0
@@ -449,7 +451,7 @@ GameObject:
   - component: {fileID: 657596204}
   - component: {fileID: 657596205}
   m_Layer: 0
-  m_Name: BackgroungMusicManager
+  m_Name: BackgroundMusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,7 +487,7 @@ MonoBehaviour:
   backgroundMusicEventChannel: {fileID: 11400000, guid: dd53e27a34c2c8748924adf6469665a5, type: 2}
   loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
   bgmFadeTime: 0.75
-  bgmVolume: 1
+  bgmVolume: 0.5
 --- !u!1 &889023898
 GameObject:
   m_ObjectHideFlags: 0
