@@ -819,6 +819,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2ac7746fb8c73dc479b9838cc920a13a, type: 3}
+--- !u!114 &1159017890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+  m_PrefabInstance: {fileID: 2896187697971957954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758fd025bf8a04c4194fff570473de75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecisionUIManager
 --- !u!4 &1579502134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3183183011656406591, guid: 5dcd3d476b064ab47be0f298f8597d6a, type: 3}
@@ -3272,6 +3283,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 2095060864}
+    - target: {fileID: 4184475561494819137, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: decisionUIManager
+      value: 
+      objectReference: {fileID: 1159017890}
     - target: {fileID: 4184475561494819137, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: candidatePhysicalManager
       value: 

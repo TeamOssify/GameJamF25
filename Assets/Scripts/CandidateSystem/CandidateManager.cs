@@ -7,6 +7,8 @@ public class CandidateManager : MonoBehaviour {
     [SerializeField] private CandidateDatabase db;
     [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
     [SerializeField] private ShiftManager shiftManager;
+    [SerializeField] private DecisionUIManager decisionUIManager;
+
     private CandidateInstance _currentCandidate;
     private readonly HashSet<CandidateInstance> _interviewedCandidates = new();
 
@@ -19,6 +21,7 @@ public class CandidateManager : MonoBehaviour {
 
         if (_currentCandidate != null) {
             BringInCandidate();
+            decisionUIManager.AddCandidate(_currentCandidate);
             if (_interviewedCandidates.Count == 0) {
                 shiftManager.StartShift();
             }

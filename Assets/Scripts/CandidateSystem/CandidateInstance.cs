@@ -6,7 +6,6 @@ public class CandidateInstance {
     public Candidate CharacterData { get; private set; }
     public CandidateVariant CurrentVariant { get; private set; }
 
-    //randomly gen name
     public string GeneratedFirstName { get; private set; }
     public string GeneratedLastName { get; private set; }
     public int GeneratedAge { get; private set; }
@@ -29,8 +28,8 @@ public class CandidateInstance {
     }
 
     private void GenerateInstanceStats() {
-        GeneratedFirstName = "t"; //get the name from sumthin
-        GeneratedLastName = "t"; //gen the name
+        GeneratedFirstName = RandomNameGen.GetRandomFirstName();
+        GeneratedLastName = RandomNameGen.GetRandomLastName();
 
         GeneratedAge = CurrentVariant.baseStats.age + Random.Range(-2, 3);
         GeneratedWeight = CurrentVariant.baseStats.weightLbs + Random.Range(-10, 10);

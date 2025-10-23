@@ -2,17 +2,17 @@ using UnityEngine;
 
 public static class RandomNameGen {
     private static readonly string[] firstNamePool = new string[] {
-        "James",
-        "Justin",
+        "Gurt",
+        "Chuck",
         "Kian",
-        "Ali"
+        "Duke"
     };
 
     private static readonly string[] lastNamePool = new string[] {
-        "Payne",
-        "Dakin",
+        "Gurting",
+        "E. Cheese",
         "Cloutier",
-        "Sheppard"
+        "Von Agnes"
     };
 
     public static string GetRandomFirstName() {
@@ -20,7 +20,7 @@ public static class RandomNameGen {
     }
 
     public static string GetRandomLastName() {
-        return firstNamePool[Random.Range(0, lastNamePool.Length)];
+        return lastNamePool[Random.Range(0, lastNamePool.Length)];
     }
 
 
