@@ -127,8 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17922cf3e68a49508337ec5f6603795f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
-  clickDownAmount: 0.0045
+  clickDelta: {x: 0, y: -0.0045, z: 0}
   clickSpeed: 0.28
+  sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
+  clickDownVolume: 0.4
+  clickDownSound: {fileID: 8300000, guid: 178e40c380d5273459e8829de7e99145, type: 3}
+  clickUpVolume: 0.4
+  clickUpSound: {fileID: 8300000, guid: 7894784939b2efb41b2f0f4518b320e5, type: 3}
   onClick:
     m_PersistentCalls:
       m_Calls: []

@@ -5,12 +5,24 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler {
+    [Header("Click Feel")]
     [SerializeField]
     private Vector3 clickDelta = new(0, -0.0045f, 0);
 
     [Range(0, 1)]
     [SerializeField]
     private float clickSpeed = 0.25f;
+
+    [Header("SFX")]
+    [SerializeField] private SfxEventChannelSO sfxEventChannel;
+
+    [Range(0, 1)]
+    [SerializeField] private float clickDownVolume = 0.5f;
+    [SerializeField] private AudioClip clickDownSound;
+
+    [Range(0, 1)]
+    [SerializeField] private float clickUpVolume = 0.5f;
+    [SerializeField] private AudioClip clickUpSound;
 
     private Vector3 _homePosition;
     private Vector3 _clickPosition;
@@ -46,6 +58,7 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
             return;
         }
 
+        sfxEventChannel.PlayVolumedSoundEffect(clickDownSound, clickDownVolume);
         _lerpTarget = _clickPosition;
         if (!_isLerping) {
             _isLerping = true;
@@ -58,6 +71,7 @@ public sealed class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointer
             return;
         }
 
+        sfxEventChannel.PlayVolumedSoundEffect(clickUpSound, clickUpVolume);
         _lerpTarget = _homePosition;
         if (!_isLerping) {
             _isLerping = true;
