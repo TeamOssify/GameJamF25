@@ -31,6 +31,7 @@ public class CandidateCell : MonoBehaviour
 
             _candidateData.PlayerDecision = true;
         }
+        Debug.Log("passed");
     }
 
     public void OnFailToggled() {
@@ -45,10 +46,12 @@ public class CandidateCell : MonoBehaviour
 
             _candidateData.PlayerDecision = false;
         }
+        Debug.Log("failed");
     }
 
     public void OnCellClicked() {
         //open notes
+        Debug.Log("opening notes");
     }
 
     public CandidateInstance Get_candidateData() {
