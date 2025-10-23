@@ -37,6 +37,7 @@ public class ShiftReportManager : MonoBehaviour {
             //fail the run
             shiftData.ResetAll();
             loadEventChannel.RaiseEvent(failScene, true);
+            return;
         }
         loadEventChannel.RaiseEvent(mainScene, true);
         shiftData.ResetForNextShift();
