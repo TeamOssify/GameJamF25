@@ -19,7 +19,7 @@ public class CandidatePhysicalManager : MonoBehaviour {
 
     private bool _isWalking = false;
     public bool IsCandidatePresent { get; private set; }
-
+    private CandidateInstance activeCandidate;
     void Awake() {
         if (candidateSpriteRenderer) {
             candidateSpriteRenderer.enabled = false;
@@ -30,6 +30,7 @@ public class CandidatePhysicalManager : MonoBehaviour {
         IsCandidatePresent = true;
         candidateSpriteRenderer.sprite = currentCandidate.CurrentVariant.fullBodySprite;
         candidateSpriteRenderer.enabled = true;
+        activeCandidate = currentCandidate;
 
         candidateTransform.position = doorTarget.position;
     }
@@ -66,6 +67,7 @@ public class CandidatePhysicalManager : MonoBehaviour {
         yield return Walk(chairTarget.position);
         yield return WaitForSecondsCache.Get(pauseBetweenMovement);
         yield return Walk(initialWalkTarget.position);
+        candidateSpriteRenderer.sprite = activeCandidate.CurrentVariant.backSprite;
         yield return WaitForSecondsCache.Get(pauseBetweenMovement);
         yield return Walk(doorTarget.position);
 
