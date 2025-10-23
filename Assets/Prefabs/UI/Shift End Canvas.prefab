@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 500, y: 300}
+  m_AnchoredPosition: {x: 0, y: -82.2}
+  m_SizeDelta: {x: 279.6295, y: 34.9977}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8905582443037464114
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well Done Investigator
+  m_text: Welcome Back Investigator
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
   m_sharedMaterial: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 7496818981669577147}
   - component: {fileID: 3402926185880801999}
   m_Layer: 5
-  m_Name: UICanvas
+  m_Name: Shift End Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,9 +883,9 @@ RectTransform:
   - {fileID: 3618990724605684971}
   m_Father: {fileID: 4297096942501248503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -125, y: 75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 263.7, y: 51.718}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4530282706489902548
@@ -1347,6 +1347,7 @@ GameObject:
   - component: {fileID: 7095631678496298150}
   - component: {fileID: 3679742093169165048}
   - component: {fileID: 3441576337168100555}
+  - component: {fileID: 1935059421341687804}
   m_Layer: 5
   m_Name: SleepButton
   m_TagString: Untagged
@@ -1369,9 +1370,9 @@ RectTransform:
   - {fileID: 8908842471674382221}
   m_Father: {fileID: 4297096942501248503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: -125}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -225, y: 74}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7095631678496298150
@@ -1395,15 +1396,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+  m_Color: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ef1c541e9a8c14438efa6a0c6cccbd2, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 93fa1f3bac1f6c3439b3d0dfca2e63a2, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1456,6 +1457,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1935059421341687804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304608791853473660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e355f5735d415591f811c63488371f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverClickSoundHandler
+  sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
+  hoverEnterSound: {fileID: 8300000, guid: eadf720184e92574da7c27f028888716, type: 3}
+  hoverEnterVolume: 0.4
+  hoverExitSound: {fileID: 0}
+  hoverExitVolume: 0.5
+  clickSound: {fileID: 8300000, guid: 10ad5ebc59bf5054d89c512d3b3e81da, type: 3}
+  clickVolume: 0.5
 --- !u!1 &4534028818897396513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1503,7 @@ RectTransform:
   m_GameObject: {fileID: 4534028818897396513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 103676171472338522}
@@ -1516,7 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.392}
+  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.5176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2325,9 +2345,9 @@ RectTransform:
   - {fileID: 5888256330471457732}
   m_Father: {fileID: 4297096942501248503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: -10}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -300, y: -10}
   m_SizeDelta: {x: 150, y: 125}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4324945952163683982
