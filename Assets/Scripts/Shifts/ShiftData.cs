@@ -3,7 +3,6 @@
 [CreateAssetMenu(fileName = "ShiftData", menuName = "Scriptable Objects/ShiftData")]
 public class ShiftData : ScriptableObject {
     public int shiftNumber;
-    public int highestShiftNumber;
 
     public int candidatesProcessedCorrectly;
     public int candidatesProcessedIncorrectly;
@@ -15,8 +14,8 @@ public class ShiftData : ScriptableObject {
 
     public void ResetAll() {
         ResetForNextShift();
-        if (shiftNumber > highestShiftNumber) {
-            highestShiftNumber = shiftNumber;
+        if (shiftNumber > PlayerPrefs.GetInt(Constants.PlayerPrefsKeys.HIGH_SCORE)) {
+            PlayerPrefs.SetInt(Constants.PlayerPrefsKeys.HIGH_SCORE, shiftNumber);
         }
         shiftNumber = 0;
     }
