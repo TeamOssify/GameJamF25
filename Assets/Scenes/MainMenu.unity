@@ -148,6 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7a15a64f345ffaf1bcb42a1a653af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
+  mainScene:
+    asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+    guid: 99c9720ab356a0642a771bea13969a05
   daysHighScoreText: {fileID: 1863992883}
 --- !u!4 &482473272
 Transform:
