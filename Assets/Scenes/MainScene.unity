@@ -606,7 +606,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -2882,20 +2882,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2114118773}
-    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1964165302}
-    - targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 749376022}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7688141957865028973, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934552981}
+    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 2114118773}},
+      {targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 1964165302}},
+      {targetCorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 749376022}}]
+    m_AddedComponents: [{targetCorrespondingSourceObject: {fileID: 7688141957865028973, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}, insertIndex: -1, addedObject: {fileID: 1934552981}}]
   m_SourcePrefab: {fileID: 100100000, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
 --- !u!224 &1934552975 stripped
 RectTransform:
@@ -2953,9 +2943,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 853917460}
     m_Modifications:
+    - target: {fileID: 251056833535252203, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366052105521491035, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: slidingMenu
+      value: 
+      objectReference: {fileID: 487139111664392322}
+    - target: {fileID: 2191989227918473991, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: slidingMenu
+      value: 
+      objectReference: {fileID: 487139111664392322}
+    - target: {fileID: 3782323738216273844, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3974692197588282031, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_Name
       value: DecisionMenuContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322206966977830711, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: slideSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3060,6 +3074,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
   m_PrefabInstance: {fileID: 84325662113671039}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &487139111664392322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+  m_PrefabInstance: {fileID: 84325662113671039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38aee22bd9ea7ac4d82c56fb18ae3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlidingMenu
 --- !u!1001 &2473129075543781294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3069,7 +3094,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
