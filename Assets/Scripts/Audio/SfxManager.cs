@@ -15,10 +15,14 @@ public sealed class SfxManager : MonoBehaviour {
 
     private void OnEnable() {
         sfxEventChannel.OnPlaySoundEffect += PlaySoundEffect;
+        sfxEventChannel.OnPlayVolumedSoundEffect += PlaySoundEffect;
+        sfxEventChannel.OnStopAllSoundEffects += StopAllSoundEffects;
     }
 
     private void OnDisable() {
         sfxEventChannel.OnPlaySoundEffect -= PlaySoundEffect;
+        sfxEventChannel.OnPlayVolumedSoundEffect -= PlaySoundEffect;
+        sfxEventChannel.OnStopAllSoundEffects -= StopAllSoundEffects;
     }
 
     public void PlaySoundEffect(AudioClip clip) {

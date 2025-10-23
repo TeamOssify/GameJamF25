@@ -3,11 +3,10 @@ using UnityEngine.EventSystems;
 
 public sealed class ClickSoundHandler : MonoBehaviour, IPointerClickHandler {
     [SerializeField] private SfxEventChannelSO sfxEventChannel;
-    [SerializeField] private AudioClip clickSound;
 
-    [SerializeField]
+    [SerializeField] private AudioClip clickSound;
     [Range(0, 1)]
-    private float volume = 0.5f;
+    [SerializeField] private float volume = 0.5f;
 
     public void OnPointerClick(PointerEventData eventData) {
         if (clickSound && eventData.button == PointerEventData.InputButton.Left) {

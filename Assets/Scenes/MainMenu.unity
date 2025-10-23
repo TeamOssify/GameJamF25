@@ -454,8 +454,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickSoundHandler
   sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
-  clickSound: {fileID: 0}
-  volume: 0.5
+  hoverEnterSound: {fileID: 8300000, guid: eadf720184e92574da7c27f028888716, type: 3}
+  hoverEnterVolume: 0.4
+  hoverExitSound: {fileID: 0}
+  hoverExitVolume: 0.4
+  clickSound: {fileID: 8300000, guid: 10ad5ebc59bf5054d89c512d3b3e81da, type: 3}
+  clickVolume: 0.5
 --- !u!1 &657596203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,8 +1246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickSoundHandler
   sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
-  clickSound: {fileID: 0}
-  volume: 0.5
+  hoverEnterSound: {fileID: 8300000, guid: eadf720184e92574da7c27f028888716, type: 3}
+  hoverEnterVolume: 0.4
+  hoverExitSound: {fileID: 0}
+  hoverExitVolume: 0.4
+  clickSound: {fileID: 8300000, guid: 10ad5ebc59bf5054d89c512d3b3e81da, type: 3}
+  clickVolume: 0.5
 --- !u!1 &1863992881
 GameObject:
   m_ObjectHideFlags: 0
