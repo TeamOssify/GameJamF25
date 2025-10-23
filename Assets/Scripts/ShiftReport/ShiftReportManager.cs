@@ -36,10 +36,10 @@ public class ShiftReportManager : MonoBehaviour {
         if (moneyManager.GetBalance() < 0) {
             //fail the run
             moneyManager.SetMoney(0);
-            loadEventChannel.RaiseEvent(failScene, true);
+            loadEventChannel.RaiseEvent(failScene, SceneLoadType.LoadingScreen);
             return;
         }
-        loadEventChannel.RaiseEvent(mainScene, true);
+        loadEventChannel.RaiseEvent(mainScene, SceneLoadType.LoadingScreen);
         shiftData.ResetForNextShift();
     }
 
