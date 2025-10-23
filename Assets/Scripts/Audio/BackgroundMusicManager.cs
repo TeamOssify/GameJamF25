@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 
+using Eflatun.SceneReference;
+
 using UnityEngine;
 
 public sealed class BackgroundMusicManager : MonoBehaviour {
     [SerializeField] private BackgroundMusicEventChannelSO backgroundMusicEventChannel;
+    [SerializeField] private LoadEventChannelSO loadEventChannel;
 
     [SerializeField]
     [Tooltip("The time in seconds it takes for the BGM to fade in or out when switching tracks.")]
@@ -32,6 +35,7 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
         backgroundMusicEventChannel.OnChangeBgmImmediate += ChangeBgmImmediate;
         backgroundMusicEventChannel.OnPauseBgm += PauseBgm;
         backgroundMusicEventChannel.OnUnpauseBgm += UnpauseBgm;
+        loadEventChannel.OnLoadingRequested += OnLoadingRequested;
     }
 
     private void OnDisable() {
@@ -39,11 +43,17 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
         backgroundMusicEventChannel.OnChangeBgmImmediate -= ChangeBgmImmediate;
         backgroundMusicEventChannel.OnPauseBgm -= PauseBgm;
         backgroundMusicEventChannel.OnUnpauseBgm -= UnpauseBgm;
+        loadEventChannel.OnLoadingRequested -= OnLoadingRequested;
+    }
+
+    private void OnLoadingRequested(SceneReference[] arg0, bool arg1) {
+        FadeBgmOutToStop();
     }
 
     public void ChangeBgmFade(AudioClip clip) {
         EnsureNotFading();
 
+        _audioSource.volume = bgmVolume;
         _fadeCoroutine = StartCoroutine(CoChangeBgmFade(clip));
     }
 
@@ -55,6 +65,19 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
         _audioSource.clip = clip;
 
         yield return _audioSource.FadeIn(bgmVolume, bgmFadeTime / 2);
+
+        _fadeCoroutine = null;
+    }
+
+    public void FadeBgmOutToStop() {
+        EnsureNotFading();
+
+        _audioSource.volume = bgmVolume;
+        _fadeCoroutine = StartCoroutine(CoFadeBgmOutToStop());
+    }
+
+    private IEnumerator CoFadeBgmOutToStop() {
+        yield return _audioSource.FadeOutToStop(bgmFadeTime);
 
         _fadeCoroutine = null;
     }
@@ -72,6 +95,7 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
         EnsureNotFading();
 
         _audioSource.Pause();
+        _audioSource.volume = bgmVolume;
     }
 
     public void UnpauseBgm() {
