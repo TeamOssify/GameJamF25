@@ -19,9 +19,9 @@ public class ShiftReportUI : MonoBehaviour {
     [SerializeField] private MoneyData moneyData;
 
     void Awake() {
-        correctProcessedText.text = shiftData.candidatesProcessedCorrectly.ToString();
-        incorrectProcessedText.text = shiftData.candidatesProcessedIncorrectly.ToString();
-
+        correctProcessedText.text = "Correct: " + shiftData.candidatesProcessedCorrectly;
+        incorrectProcessedText.text = "Incorrect: " + shiftData.candidatesProcessedIncorrectly;
+        totalProcessedText.text = "Total: " + (shiftData.candidatesProcessedCorrectly + shiftData.candidatesProcessedIncorrectly);
         savingsValueText.text = moneyData.currentBalance.ToString();
     }
 
