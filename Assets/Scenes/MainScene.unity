@@ -459,7 +459,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -785,9 +785,33 @@ PrefabInstance:
       propertyPath: slideSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: hidePosition.x
+      value: 1290
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: hidePosition.y
+      value: 316.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: hidePosition.z
+      value: 8.287309
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: showPosition.x
+      value: 1030
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: showPosition.y
+      value: 316.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: showPosition.z
+      value: 8.287309
+      objectReference: {fileID: 0}
     - target: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1125
+      value: 1290
       objectReference: {fileID: 0}
     - target: {fileID: 6524529790048297479, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_Color.a
@@ -1073,7 +1097,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
