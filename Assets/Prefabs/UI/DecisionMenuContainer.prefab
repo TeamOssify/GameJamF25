@@ -226,7 +226,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403195546930463592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8.287309}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.11939857, y: 0.7163914, z: 0.7163914}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,8 +234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 1171.3638, y: 316.05402}
-  m_SizeDelta: {x: 500, y: 600}
+  m_AnchoredPosition: {x: 1198.6425, y: 316.05402}
+  m_SizeDelta: {x: 750, y: 570}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8825546356326500226
 CanvasRenderer:
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0.36078432}
+  m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2604b7daa3590544f880a2220d089344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuHoverEnter
-  slidingMenu: {fileID: 0}
+  slidingMenu: {fileID: 4392485415046443692}
 --- !u!1 &3782323738216273844
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,8 +323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 1171.3638, y: 316.05402}
-  m_SizeDelta: {x: 600, y: 800}
+  m_AnchoredPosition: {x: 1198.6425, y: 316.05402}
+  m_SizeDelta: {x: 620, y: 800}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8173796721647113313
 CanvasRenderer:
@@ -347,8 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.105882354}
-  m_RaycastTarget: 0
+  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f602fd80ad665ec4798d2df01c75d87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::O
-  slidingMenu: {fileID: 0}
+  slidingMenu: {fileID: 4392485415046443692}
 --- !u!1 &3974692197588282031
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 1022.1156, y: 316.05402}
+  m_AnchoredPosition: {x: 1290, y: 316.05402}
   m_SizeDelta: {x: 500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4358439412845717944
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38aee22bd9ea7ac4d82c56fb18ae3a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlidingMenu
-  slideSpeed: 100
+  slideSpeed: 20
   slideCurve:
     serializedVersion: 2
     m_Curve:
@@ -561,5 +561,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  hidePosition: {x: 1125, y: 0, z: 0}
-  showPosition: {x: 676, y: 0, z: 0}
+  hidePosition: {x: 1290, y: 316.054, z: 8.287309}
+  showPosition: {x: 1030, y: 316.054, z: 8.287309}
