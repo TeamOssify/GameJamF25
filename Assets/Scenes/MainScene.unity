@@ -2118,6 +2118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LOCAL MANAGERS
       objectReference: {fileID: 0}
+    - target: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: candidateManager
+      value: 
+      objectReference: {fileID: 346357617}
     - target: {fileID: 2293661282723320965, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: timerText
       value: 

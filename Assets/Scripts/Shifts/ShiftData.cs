@@ -3,6 +3,7 @@
 [CreateAssetMenu(fileName = "ShiftData", menuName = "Scriptable Objects/ShiftData")]
 public class ShiftData : ScriptableObject {
     public int shiftNumber;
+    public int highestShiftNumber;
 
     public int candidatesProcessedCorrectly;
     public int candidatesProcessedIncorrectly;
@@ -14,6 +15,9 @@ public class ShiftData : ScriptableObject {
 
     public void ResetAll() {
         ResetForNextShift();
+        if (shiftNumber > highestShiftNumber) {
+            highestShiftNumber = shiftNumber;
+        }
         shiftNumber = 0;
     }
 }

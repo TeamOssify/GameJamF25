@@ -29,20 +29,24 @@ public class ShiftManager : MonoBehaviour {
     // switches the scene to the report screen
     public void EndShift() {
         var interviewedCandidates = candidateManager.GetInterviewedCandidates();
-        int correct = 0;
-        int incorrect = 0;
-        bool undecidedFlag = false;
+        var correct = 0;
+        var incorrect = 0;
 
         foreach (var candidate in interviewedCandidates) {
             if (candidate.PlayerDecision == null) {
-                undecidedFlag = true;
                 Debug.Log("Cannot end shift because there is undecided candidates");
                 return;
             }
             if(candidate.IsHuman() && candidate.PlayerDecision == true) {
                 correct++;
             }
+            else {
+                incorrect++;
+            }
         }
+        shiftData.candidatesProcessedCorrectly = correct;
+        shiftData.candidatesProcessedIncorrectly = incorrect;
+
         loadEventChannel.RaiseEvent(reportScene, false);
     }
 }
