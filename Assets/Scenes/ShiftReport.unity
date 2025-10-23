@@ -475,6 +475,8 @@ MonoBehaviour:
   correctProcessedText: {fileID: 1956423149}
   incorrectProcessedText: {fileID: 554040977}
   totalProcessedText: {fileID: 481607069}
+  shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
+  moneyData: {fileID: 11400000, guid: 4a27d8e342aff844b800c4db6b817bfb, type: 2}
 --- !u!1001 &5725553598765823457
 PrefabInstance:
   m_ObjectHideFlags: 0
