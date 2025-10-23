@@ -20,8 +20,7 @@ public class ShiftManager : MonoBehaviour {
 
     // checks if the shift should end and ends it
     public void CheckShiftEnd() {
-        if (shiftTimer.TimerEnded)
-        {
+        if (shiftTimer.TimerEnded) {
             EndShift();
         }
     }
@@ -47,6 +46,6 @@ public class ShiftManager : MonoBehaviour {
         shiftData.candidatesProcessedCorrectly = correct;
         shiftData.candidatesProcessedIncorrectly = incorrect;
 
-        loadEventChannel.RaiseEvent(reportScene, false);
+        loadEventChannel.RaiseEvent(reportScene, SceneLoadType.Immediate);
     }
 }

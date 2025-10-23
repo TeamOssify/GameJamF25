@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour {
 
     public void PlayButton_OnClick() {
         Debug.Log("Loading main scene from main menu");
-        loadEventChannel.RaiseEvent(mainScene, true);
+        loadEventChannel.RaiseEvent(mainScene, SceneLoadType.Immediate);
     }
 
     public void ExitButton_OnClick() {

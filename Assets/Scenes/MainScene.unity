@@ -2056,10 +2056,6 @@ PrefabInstance:
       propertyPath: candidatePhysicalManager
       value: 
       objectReference: {fileID: 42092381}
-    - target: {fileID: 5316513151434512418, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
-      propertyPath: loadEventChannel
-      value: 
-      objectReference: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
     - target: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: notesText
       value: 

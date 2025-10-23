@@ -471,5 +471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusicManager
   backgroundMusicEventChannel: {fileID: 11400000, guid: dd53e27a34c2c8748924adf6469665a5, type: 2}
+  loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
   bgmFadeTime: 0.75
-  bgmVolume: 1
+  bgmVolume: 0.5

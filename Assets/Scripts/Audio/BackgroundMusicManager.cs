@@ -15,7 +15,7 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
 
     [SerializeField]
     [Range(0, 1)]
-    private float bgmVolume = 1f;
+    private float bgmVolume = 0.5f;
 
     private AudioSource _audioSource;
     private Coroutine _fadeCoroutine;
@@ -46,7 +46,7 @@ public sealed class BackgroundMusicManager : MonoBehaviour {
         loadEventChannel.OnLoadingRequested -= OnLoadingRequested;
     }
 
-    private void OnLoadingRequested(SceneReference[] arg0, bool arg1) {
+    private void OnLoadingRequested(SceneReference[] arg0, SceneLoadType arg1) {
         FadeBgmOutToStop();
     }
 
