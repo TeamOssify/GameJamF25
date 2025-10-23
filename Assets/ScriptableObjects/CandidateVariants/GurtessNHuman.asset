@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
   m_Name: GurtessNHuman
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  candidateType: 0
+  candidateType: 1
   fullBodySprite: {fileID: 21300000, guid: 6f1bef29845150e4981adddec7711528, type: 3}
   backSprite: {fileID: 21300000, guid: 42a68e6e8af178344882ad7aef0b5930, type: 3}
   portraitSprite: {fileID: 21300000, guid: cb53b57750d4d5b42b3bfe673d82c8da, type: 3}

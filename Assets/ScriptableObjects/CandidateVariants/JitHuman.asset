@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
   m_Name: JitHuman
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  candidateType: 1
+  candidateType: 0
   fullBodySprite: {fileID: 21300000, guid: 27fc25175d97b1a4aa237b980b8cf6fd, type: 3}
   backSprite: {fileID: 21300000, guid: af93429b31e244e45b62626435b7a96f, type: 3}
   portraitSprite: {fileID: 21300000, guid: db3dd9250eece4047955f631cb0f2116, type: 3}
