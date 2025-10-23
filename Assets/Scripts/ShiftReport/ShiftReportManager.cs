@@ -35,10 +35,12 @@ public class ShiftReportManager : MonoBehaviour {
         moneyManager.AddMoney(shiftData.candidatesProcessedCorrectly * moneyManager.GetCurrentSalary());
         moneyManager.SubtractMoney(moneyManager.GetCurrentRentCost());
 
-        totalProcessedText.text = "$" + moneyManager.GetBalance();
+        totalBalanceText.text = "$" + moneyManager.GetBalance();
     }
 
     private void UpdateShiftReportUI() {
+        dayText.text = "Day " + shiftData.shiftNumber;
+
         correctProcessedText.text = "Correct: " + shiftData.candidatesProcessedCorrectly;
         incorrectProcessedText.text = "Incorrect: " + shiftData.candidatesProcessedIncorrectly;
         totalProcessedText.text = "Total: " + (shiftData.candidatesProcessedCorrectly + shiftData.candidatesProcessedIncorrectly);
