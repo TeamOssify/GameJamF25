@@ -36,6 +36,8 @@ Transform:
   - {fileID: 8742012097774934430}
   - {fileID: 334535439421792274}
   - {fileID: 7350137630699657905}
+  - {fileID: 1491029204910170023}
+  - {fileID: 6394557225739057047}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2905012298082973284
@@ -168,6 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DecisionUIManager
   decisionUI: {fileID: 0}
   candidateCell: {fileID: 1519315088279272910, guid: faab4bc6822add9499b89171d26856f1, type: 3}
+  cellContainer: {fileID: 0}
+  notesText: {fileID: 0}
 --- !u!1 &960867677241581772
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +224,7 @@ MonoBehaviour:
   reportScene:
     asset: {fileID: 102900000, guid: 483777ac032a218459885b4f8f1c7c67, type: 3}
     guid: 483777ac032a218459885b4f8f1c7c67
+  candidateManager: {fileID: 0}
 --- !u!114 &2293661282723320965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +287,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogManager
   dialogEventChannel: {fileID: 11400000, guid: b6ff71977b7f88841b006c91755b15f3, type: 2}
+--- !u!1 &1713349377283323158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6394557225739057047}
+  - component: {fileID: 8046951500793079911}
+  m_Layer: 0
+  m_Name: SfxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6394557225739057047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713349377283323158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7633742406413705785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8046951500793079911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713349377283323158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642639e905c54b7ba0aedf1b20574b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SfxManager
+  sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
 --- !u!1 &6704371043687015836
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +379,8 @@ MonoBehaviour:
   db: {fileID: 11400000, guid: 3aeb83a1a8db4604e9530d5eb9fc3b54, type: 2}
   candidatePhysicalManager: {fileID: 0}
   shiftManager: {fileID: 175555095429469996}
+  decisionUIManager: {fileID: 6869008292193003053}
+  notesText: {fileID: 0}
 --- !u!1 &8169745179051486146
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,3 +426,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
   money: {fileID: 11400000, guid: 4a27d8e342aff844b800c4db6b817bfb, type: 2}
+--- !u!1 &8802837867427300532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491029204910170023}
+  - component: {fileID: 5316513151434512418}
+  m_Layer: 0
+  m_Name: BackgroundMusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491029204910170023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802837867427300532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7633742406413705785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5316513151434512418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802837867427300532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275525fd4174487a8aebbc359925c8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusicManager
+  backgroundMusicEventChannel: {fileID: 11400000, guid: dd53e27a34c2c8748924adf6469665a5, type: 2}
+  bgmFadeTime: 0.75
+  bgmVolume: 1
