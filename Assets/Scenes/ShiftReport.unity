@@ -478,6 +478,13 @@ MonoBehaviour:
   totalProcessedText: {fileID: 481607069}
   shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
   moneyManager: {fileID: 900747692049725951}
+  loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
+  mainScene:
+    asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+    guid: 99c9720ab356a0642a771bea13969a05
+  failScene:
+    asset: {fileID: 102900000, guid: ef431a4ab0da72b489f26e7b024b4f6d, type: 3}
+    guid: ef431a4ab0da72b489f26e7b024b4f6d
 --- !u!114 &900747692049725951 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7348731907355165571, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}

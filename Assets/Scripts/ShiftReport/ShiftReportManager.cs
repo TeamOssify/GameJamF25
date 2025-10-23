@@ -1,3 +1,5 @@
+using Eflatun.SceneReference;
+
 using TMPro;
 
 using UnityEngine;
@@ -20,6 +22,9 @@ public class ShiftReportManager : MonoBehaviour {
 
     [SerializeField] private MoneyManager moneyManager;
 
+    [SerializeField] private LoadEventChannelSO loadEventChannel;
+    [SerializeField] private SceneReference mainScene;
+    [SerializeField] private SceneReference failScene;
 
     void Awake() {
         UpdateShiftReportUI();
@@ -28,7 +33,12 @@ public class ShiftReportManager : MonoBehaviour {
     }
 
     public void SleepButtonPressed() {
-
+        if (moneyManager.GetBalance() < 0) {
+            //fail the run
+            shiftData.ResetAll();
+        }
+        loadEventChannel.RaiseEvent(mainScene, true);
+        shiftData.ResetForNextShift();
     }
 
     private void UpdateBalance() {
