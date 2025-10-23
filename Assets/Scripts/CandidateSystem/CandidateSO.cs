@@ -3,12 +3,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Candidate", menuName = "Scriptable Objects/Candidate")]
 public class Candidate : ScriptableObject {
     [Header("Character Identity")]
-    public string characterId;
     public string characterName;
 
     [Header("Variants")]
     [Tooltip("Human version of this character")]
     public CandidateVariant humanVariant;
+
     [Tooltip("Non-Human version of this character")]
     public CandidateVariant nonHumanVariant;
 

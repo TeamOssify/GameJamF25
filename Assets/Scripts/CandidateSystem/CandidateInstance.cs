@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +17,7 @@ public class CandidateInstance {
     public bool HasBeenInterviewed { get; set; }
 
     public CandidateInstance(Candidate characterData, CandidateVariant variant) {
-        characterData = characterData;
+        CharacterData = characterData;
         CurrentVariant = variant;
         AskedQuestions = new List<Question>();
         PlayerNotes = "";

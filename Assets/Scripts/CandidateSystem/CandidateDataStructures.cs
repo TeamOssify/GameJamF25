@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 
 public class CandidateDataStructures : MonoBehaviour {
@@ -11,20 +13,8 @@ public class CandidateDataStructures : MonoBehaviour {
         Responsive
     }
 
-    [System.Serializable]
-    public class QuestionResponse {
-        public Question question;
-
-        [TextArea(3, 10)]
-        public string responseText;
-
-        public BodyLanguageBehavior responsiveBodyLanguage;
-    }
-
-    [System.Serializable]
+    [Serializable]
     public class CandidateStats {
-        public string firstName;
-        public string lastName;
         public int age;
         public string heightFt;
         public float weightLbs;
