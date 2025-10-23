@@ -441,61 +441,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: dayText
+      value: 
+      objectReference: {fileID: 109334975}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: endMessage
+      value: 
+      objectReference: {fileID: 336375154}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: salaryText
+      value: 
+      objectReference: {fileID: 480137036}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: rentCostText
+      value: 
+      objectReference: {fileID: 1583218465}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: salaryValueText
+      value: 
+      objectReference: {fileID: 206532022}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: savingsValueText
+      value: 
+      objectReference: {fileID: 738086995}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: totalBalanceText
+      value: 
+      objectReference: {fileID: 5725553598765823458}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: totalProcessedText
+      value: 
+      objectReference: {fileID: 481607069}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: correctProcessedText
+      value: 
+      objectReference: {fileID: 1956423149}
+    - target: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+      propertyPath: incorrectProcessedText
+      value: 
+      objectReference: {fileID: 554040977}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8698948522817207199, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 900747692049725950}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
---- !u!1 &900747692049725949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8698948522817207199, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
-  m_PrefabInstance: {fileID: 900747692049725948}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &900747692049725950
+--- !u!114 &900747692049725950 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900747692049725949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e90747e361f284a9a7aa40fb98dbc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShiftReportUI
-  endMessage: {fileID: 336375154}
-  dayText: {fileID: 109334975}
-  salaryText: {fileID: 480137036}
-  salaryValueText: {fileID: 206532022}
-  savingsValueText: {fileID: 738086995}
-  rentCostText: {fileID: 1583218465}
-  totalBalanceText: {fileID: 5725553598765823458}
-  correctProcessedText: {fileID: 1956423149}
-  incorrectProcessedText: {fileID: 554040977}
-  totalProcessedText: {fileID: 481607069}
-  shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
-  moneyManager: {fileID: 900747692049725951}
-  loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
-  mainScene:
-    asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
-    guid: 99c9720ab356a0642a771bea13969a05
-  failScene:
-    asset: {fileID: 102900000, guid: ef431a4ab0da72b489f26e7b024b4f6d, type: 3}
-    guid: ef431a4ab0da72b489f26e7b024b4f6d
---- !u!114 &900747692049725951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7348731907355165571, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8625112676293287556, guid: 9149a05c6b135bd49a8d2338c658ec77, type: 3}
   m_PrefabInstance: {fileID: 900747692049725948}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5818c9b2940d54ea41ad21739b314c, type: 3}
+  m_Script: {fileID: 11500000, guid: f0e90747e361f284a9a7aa40fb98dbc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftReportUI
 --- !u!1001 &5725553598765823457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,6 +524,34 @@ PrefabInstance:
     - target: {fileID: 2823987855155578655, guid: 3a213e659e28aad40892359409e4182b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 900747692049725950}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SleepButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShiftReportManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441576337168100555, guid: 3a213e659e28aad40892359409e4182b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4270711228354953689, guid: 3a213e659e28aad40892359409e4182b, type: 3}
       propertyPath: m_AnchorMax.y

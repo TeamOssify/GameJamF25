@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358080619691142381}
+  - component: {fileID: 8625112676293287556}
   m_Layer: 0
   m_Name: ShiftReportManager
   m_TagString: Untagged
@@ -109,3 +110,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7073407126284886126}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8625112676293287556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698948522817207199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e90747e361f284a9a7aa40fb98dbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftReportUI
+  endMessage: {fileID: 0}
+  dayText: {fileID: 0}
+  salaryText: {fileID: 0}
+  salaryValueText: {fileID: 0}
+  savingsValueText: {fileID: 0}
+  rentCostText: {fileID: 0}
+  totalBalanceText: {fileID: 0}
+  correctProcessedText: {fileID: 0}
+  incorrectProcessedText: {fileID: 0}
+  totalProcessedText: {fileID: 0}
+  shiftData: {fileID: 11400000, guid: 831eb37e9036d074f8b12f555841c955, type: 2}
+  moneyManager: {fileID: 7348731907355165571}
+  loadEventChannel: {fileID: 11400000, guid: 2b74545f1c7318544910b1ea5cd71488, type: 2}
+  mainScene:
+    asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+    guid: 99c9720ab356a0642a771bea13969a05
+  failScene:
+    asset: {fileID: 102900000, guid: ef431a4ab0da72b489f26e7b024b4f6d, type: 3}
+    guid: ef431a4ab0da72b489f26e7b024b4f6d
