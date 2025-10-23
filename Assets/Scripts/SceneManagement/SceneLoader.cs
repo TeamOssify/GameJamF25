@@ -51,19 +51,25 @@ public sealed class SceneLoader : MonoBehaviour {
         _activeScene = locationsToLoad[0];
 
         foreach (var sceneReference in locationsToLoad) {
-            if (!IsSceneLoaded(sceneReference.LoadedScene)) {
-                _scenesToLoadAsyncOperations.Add(SceneManager.LoadSceneAsync(sceneReference.BuildIndex, LoadSceneMode.Additive));
+            // This should never really happen except when working in the editor
+            if (IsSceneLoaded(sceneReference.LoadedScene)) {
+                _scenesToUnload.Remove(sceneReference.LoadedScene);
+                continue;
             }
+
+            _scenesToLoadAsyncOperations.Add(SceneManager.LoadSceneAsync(sceneReference.BuildIndex, LoadSceneMode.Additive));
         }
 
-        _scenesToLoadAsyncOperations[0].completed += SetActiveScene;
+        if (_scenesToLoadAsyncOperations.Count > 0) {
+            _scenesToLoadAsyncOperations[0].completed += SetActiveScene;
 
-        loadingInterface.SetActive(showLoadingScreen);
-        if (showLoadingScreen) {
-            StartCoroutine(TrackLoadingProgress());
-        }
-        else {
-            _scenesToLoadAsyncOperations.Clear();
+            loadingInterface.SetActive(showLoadingScreen);
+            if (showLoadingScreen) {
+                StartCoroutine(TrackLoadingProgress());
+            }
+            else {
+                _scenesToLoadAsyncOperations.Clear();
+            }
         }
 
         UnloadScenes();
