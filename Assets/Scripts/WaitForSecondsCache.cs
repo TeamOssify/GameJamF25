@@ -8,7 +8,6 @@ public static class WaitForSecondsCache {
     private static readonly Dictionary<float, WaitForSeconds> Cache = new();
 
     public static WaitForSeconds Get(float waitTime) {
-        const int blah = 10;
         if (Cache.TryGetValue(waitTime, out var value)) {
             return value;
         }

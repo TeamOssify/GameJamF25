@@ -32,7 +32,7 @@ public class CandidateManager : MonoBehaviour {
     }
 
     public void LoadNextCandidate() {
-        if (!candidateEventChannel || candidatePhysicalManager.IsCandidatePresent) {
+        if (!_canLoadNextCandidate || candidatePhysicalManager.IsCandidatePresent) {
             return;
         }
 
