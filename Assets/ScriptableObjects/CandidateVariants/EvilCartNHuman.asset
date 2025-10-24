@@ -15,11 +15,12 @@ MonoBehaviour:
   candidateType: 1
   fullBodySprite: {fileID: 21300000, guid: 04b595f72b8f9884b93ed6f7ce56bab3, type: 3}
   backSprite: {fileID: 21300000, guid: e6cdc74252937554f91fb10052336e0b, type: 3}
-  portraitSprite: {fileID: 21300000, guid: cb53b57750d4d5b42b3bfe673d82c8da, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 04b595f72b8f9884b93ed6f7ce56bab3, type: 3}
   baseStats:
     age: 21
     heightFt: 6'2
     weightLbs: 400
+  dialog: {fileID: 0}
   passiveBodyLanguages:
   - {fileID: 0}
   physicalDiscrepancies: []
