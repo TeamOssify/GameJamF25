@@ -21,6 +21,7 @@ public class ConversationWindow : MonoBehaviour {
     [SerializeField] private AudioClip newMessageSound;
     [SerializeField] private float newMessageVolume = 0.2f;
 
+    private readonly object _dialogCoroutineLock = new();
     private Coroutine _dialogCoroutine;
     private readonly Queue<(DialogOwner owner, string message)> _dialogQueue = new();
     private readonly Queue<string> _questionQueue = new();
@@ -47,7 +48,7 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     private void RunDialogRenderer() {
-        lock (_dialogCoroutine) {
+        lock (_dialogCoroutineLock) {
             if (_dialogCoroutine == null) {
                 _dialogCoroutine = StartCoroutine(CoRenderDialog());
             }
@@ -106,7 +107,7 @@ public class ConversationWindow : MonoBehaviour {
             }
         }
 
-        lock (_dialogCoroutine) {
+        lock (_dialogCoroutineLock) {
             _dialogCoroutine = null;
         }
     }
