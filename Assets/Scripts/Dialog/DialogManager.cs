@@ -46,7 +46,7 @@ public sealed class DialogManager : MonoBehaviour {
 
     private void OnCandidateStoodUp(CandidateInstance arg0) {
         _currentCandidate = null;
-        _dialogStateMachine.Exit();
+        _dialogStateMachine?.Exit();
     }
 
     private void OnChosenPlayerQuestion(string question) {

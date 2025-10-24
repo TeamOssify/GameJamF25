@@ -5,15 +5,15 @@
       {
         "Tree": [
           {
-            "Candidate": "Hello, my name is Charles Entertainment Cheese!"
+            "Candidate": "Yoooo! Whats going on inspector!"
           },
           {
             "Candidate": "I am the owner of the famous restaurant Chuck E. Cheese."
           },
           {
-            "Player": "I don't get paid enough for this shit",
+            "Player": "I don't get paid enough for this...",
             "PlayerResponses": {
-              "Hello Charles.": "C_ReplyHello",
+              "Hello. Let us begin": "C_ReplyHello",
               "Screw off.": "C_ReplyScrewOff"
             }
           },
