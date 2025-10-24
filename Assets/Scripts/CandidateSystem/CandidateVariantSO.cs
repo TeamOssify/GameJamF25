@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 
 using JetBrains.Annotations;
 
@@ -22,9 +22,9 @@ public class CandidateVariantSO : ScriptableObject {
     public CandidateDialogSO dialog;
 
     [Header("Body Language")]
-    public List<BodyLanguageBehavior> passiveBodyLanguages = new();
+    public BodyLanguageBehavior[] passiveBodyLanguages = Array.Empty<BodyLanguageBehavior>();
 
     [Header("Physical Tells")]
     [Tooltip("List of physical discrepancies that can be spotted by player")]
-    public List<string> physicalDiscrepancies = new();
+    public string[] physicalDiscrepancies = Array.Empty<string>();
 }
