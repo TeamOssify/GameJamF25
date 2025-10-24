@@ -21,13 +21,14 @@ public class ConversationWindow : MonoBehaviour {
     [SerializeField] private AudioClip newMessageSound;
     [SerializeField] private float newMessageVolume = 0.2f;
 
-    private readonly object _dialogCoroutineLock = new();
-    private Coroutine _dialogCoroutine;
+    private bool _isNewTree = false;
     private readonly Queue<(DialogOwner owner, string message)> _dialogQueue = new();
     private readonly Queue<string> _questionQueue = new();
     private readonly List<PlayerQuestion> _currentQuestions = new();
 
     private void OnEnable() {
+        StartCoroutine(ListenForDialog());
+
         dialogEventChannel.OnClearDialog += OnClearDialog;
         dialogEventChannel.OnNewDialogTree += OnNewDialogTree;
         dialogEventChannel.OnNewDialogMessage += OnNewDialogMessage;
@@ -44,49 +45,43 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     private void OnNewDialogTree() {
-        InstantiateTreeSeparator();
-    }
-
-    private void RunDialogRenderer() {
-        lock (_dialogCoroutineLock) {
-            if (_dialogCoroutine == null) {
-                _dialogCoroutine = StartCoroutine(CoRenderDialog());
-            }
-        }
+        _isNewTree = true;
     }
 
     private void OnClearDialog() {
+        _dialogQueue.Clear();
+        _questionQueue.Clear();
+        _currentQuestions.Clear();
+
         var childCount = windowContents.childCount;
         for (var i = 0; i < childCount; i++) {
             Destroy(windowContents.GetChild(i).gameObject);
         }
-
-        _dialogQueue.Clear();
-        _questionQueue.Clear();
-        _currentQuestions.Clear();
     }
 
     private void OnNewDialogMessage(DialogOwner owner, string message) {
         _dialogQueue.Enqueue((owner, message));
-
-        RunDialogRenderer();
     }
 
     private void OnNewPlayerQuestions(string[] questions) {
         foreach (var question in questions) {
             _questionQueue.Enqueue(question);
         }
-
-        RunDialogRenderer();
     }
 
     private void OnChosenPlayerQuestion(string question) {
         OnNewDialogMessage(DialogOwner.Player, question);
     }
 
-    private IEnumerator CoRenderDialog() {
-        do {
+    // Hack to fix weird layout issues
+    private IEnumerator ListenForDialog() {
+        while (enabled) {
             var created = false;
+
+            if (_isNewTree && (_dialogQueue.Count > 0 || _questionQueue.Count > 0)) {
+                _isNewTree = false;
+                InstantiateTreeSeparator();
+            }
 
             if (!created && _dialogQueue.TryDequeue(out var dialog)) {
                 InstantiateMessage(dialog.owner, dialog.message);
@@ -109,10 +104,11 @@ public class ConversationWindow : MonoBehaviour {
                 // Must occur after waiting
                 LayoutRebuilder.ForceRebuildLayoutImmediate(windowContents);
             }
-        } while (_dialogQueue.Count > 0 && _questionQueue.Count > 0);
 
-        lock (_dialogCoroutineLock) {
-            _dialogCoroutine = null;
+            // CPU optimization
+            if (_dialogQueue.Count == 0 && _questionQueue.Count == 0) {
+                yield return WaitForSecondsCache.Get(0.25f);
+            }
         }
     }
 
