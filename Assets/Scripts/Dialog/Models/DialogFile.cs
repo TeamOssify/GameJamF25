@@ -39,8 +39,13 @@ public sealed class DialogFile {
         [Description("Intro dialog.")]
         public DialogTree[] Intro { get; set; }
 
-        [Description("Turtle question dialog.")]
-        public DialogTree[] TurtleQuestion { get; set; }
+        public DialogTree[] YouAndYourChildAreStarving { get; set; }
+
+        public DialogTree[] YouSeeAStuckTurtle { get; set; }
+
+        public DialogTree[] YouSeeADeer { get; set; }
+
+        public DialogTree[] WhoWouldYouBringForDinner { get; set; }
     }
 
     [Description("Human dialog.")]

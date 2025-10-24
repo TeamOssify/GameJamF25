@@ -33,7 +33,7 @@ public sealed class DialogManager : MonoBehaviour {
     }
 
     private void OnCandidateSatDown(CandidateInstance candidate) {
-        StartCoroutine(ShowIntroDialog(candidate));
+        StartCoroutine(ShowDialogTree(candidate, DialogTreeType.Intro));
     }
 
     private void OnCandidateStoodUp(CandidateInstance arg0) {
@@ -46,11 +46,11 @@ public sealed class DialogManager : MonoBehaviour {
         _questionPending = false;
     }
 
-    private IEnumerator ShowIntroDialog(CandidateInstance candidate) {
+    private IEnumerator ShowDialogTree(CandidateInstance candidate, DialogTreeType treeType) {
         yield return WaitForSecondsCache.Get(1);
 
         var dialogSet = ChooseRandomDialogSet(candidate);
-        var chosenTree = dialogSet.Intro[Random.Range(0, dialogSet.Intro.Length)];
+        var chosenTree = DialogTreeChooser.GetTree(dialogSet, treeType);
 
         _dialogStateMachine = new DialogStateMachine(chosenTree);
         yield return ExecuteDialogStateMachine(_dialogStateMachine);

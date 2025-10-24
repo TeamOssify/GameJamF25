@@ -8,3 +8,11 @@ public enum BodyLanguageType {
     Blink,
     Shutter
 }
+
+public enum DialogTreeType {
+    Intro,
+    YouAndYourChildAreStarving,
+    YouSeeAStuckTurtle,
+    YouSeeADeer,
+    WhoWouldYouBringForDinner
+}
