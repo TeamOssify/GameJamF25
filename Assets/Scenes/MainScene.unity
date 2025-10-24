@@ -1672,6 +1672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DecisionMenuContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: showPosition.x
+      value: 1055
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1290
+      objectReference: {fileID: 0}
     - target: {fileID: 7784777096932995380, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

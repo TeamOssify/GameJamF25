@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class RandomNameGen {
     private static readonly string[] FirstNamePool = {
+        "Chuck",
         "Raian",
         "Ryan",
         "Kian",
@@ -74,7 +75,8 @@ public static class RandomNameGen {
         "Petrov",
         "Ivanov",
         "Dimitriev",
-        "Karmazov"
+        "Karmazov",
+        "E. Cheese"
     };
 
     public static string GetRandomFirstName() {
