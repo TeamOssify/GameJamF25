@@ -10,7 +10,7 @@ public class DecisionUIManager : MonoBehaviour {
     [SerializeField] private TMP_InputField notesText;
 
     private List<CandidateCell> _activeCells = new List<CandidateCell>();
-
+    private CandidateInstance _activeCandidateNotes;
     public void AddCandidate(CandidateInstance candidate) {
         GameObject cellObj = Instantiate(candidateCell, cellContainer.transform);
         CandidateCell cell = cellObj.GetComponent<CandidateCell>();
@@ -18,6 +18,7 @@ public class DecisionUIManager : MonoBehaviour {
         if (cell != null) {
             cell.Initialize(candidate);
             cell.updateNotes.AddListener(() => UpdateNotes(candidate));
+            _activeCandidateNotes = candidate;
             _activeCells.Add(cell);
         }
     }
@@ -32,7 +33,11 @@ public class DecisionUIManager : MonoBehaviour {
     }
 
     private void UpdateNotes(CandidateInstance candidate) {
-        notesText.text = candidate.PlayerNotes;
+        _activeCandidateNotes = candidate;
+        notesText.text = _activeCandidateNotes.PlayerNotes;
     }
 
+    public void SaveNotes() {
+        _activeCandidateNotes.PlayerNotes = notesText.text;
+    }
 }

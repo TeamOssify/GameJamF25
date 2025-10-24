@@ -730,8 +730,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 346357617}
-        m_TargetAssemblyTypeName: CandidateManager, Assembly-CSharp
+      - m_Target: {fileID: 727360079}
+        m_TargetAssemblyTypeName: DecisionUIManager, Assembly-CSharp
         m_MethodName: SaveNotes
         m_Mode: 1
         m_Arguments:
@@ -971,6 +971,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &727360079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+  m_PrefabInstance: {fileID: 2896187697971957954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758fd025bf8a04c4194fff570473de75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecisionUIManager
 --- !u!1 &853917456
 GameObject:
   m_ObjectHideFlags: 0

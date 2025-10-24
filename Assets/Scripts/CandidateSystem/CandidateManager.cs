@@ -64,8 +64,4 @@ public class CandidateManager : MonoBehaviour {
     public IReadOnlyCollection<CandidateInstance> GetInterviewedCandidates() {
         return _interviewedCandidates;
     }
-
-    public void SaveNotes() {
-        _currentCandidate.PlayerNotes = notesText.text;
-    }
 }
