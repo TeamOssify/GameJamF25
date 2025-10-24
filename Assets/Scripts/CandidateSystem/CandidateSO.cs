@@ -17,8 +17,6 @@ public class CandidateSO : ScriptableObject {
         var pick = pool[Random.Range(0, pool.Length)];
         Debug.Log("Picked");
         Debug.Log(pick);
-        Debug.Log("from pool");
-        Debug.Log(pool);
         return pick;
     }
 }
