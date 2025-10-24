@@ -132,6 +132,6 @@ public class ConversationWindow : MonoBehaviour {
 
         _currentQuestions.Clear();
 
-        dialogEventChannel.RaiseOnChosenPlayerQuestion(question);
+        dialogEventChannel.RaiseChosenPlayerQuestion(question);
     }
 }

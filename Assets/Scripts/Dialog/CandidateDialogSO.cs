@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Newtonsoft.Json;
+
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Candidate Dialog")]
 public sealed class CandidateDialogSO : ScriptableObject {
@@ -6,5 +8,13 @@ public sealed class CandidateDialogSO : ScriptableObject {
 
     private DialogFile _dialogFile;
 
-    public DialogFile Dialog => _dialogFile ??= JsonUtility.FromJson<DialogFile>(dialogJsonFile.text);
+    public DialogFile Dialog {
+        get {
+            if (_dialogFile == null) {
+                _dialogFile = JsonConvert.DeserializeObject<DialogFile>(dialogJsonFile.text);
+            }
+
+            return _dialogFile;
+        }
+    }
 }
