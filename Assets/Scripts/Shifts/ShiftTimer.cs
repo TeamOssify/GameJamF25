@@ -14,7 +14,7 @@ public class ShiftTimer : MonoBehaviour {
 
     public bool TimerStarted => _timerActive;
     public bool TimerEnded => !_timerActive;
-    public UnityEvent OnTimerEnd;
+    public UnityAction OnTimerEnd;
 
     private void Awake() {
         SetTimerText(shiftDuration);

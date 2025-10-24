@@ -56,7 +56,7 @@ public class ShiftManager : MonoBehaviour {
         foreach (var candidate in interviewedCandidates) {
             if (candidate.PlayerDecision == null) {
                 undecidedText.enabled = true;
-                Invoke(nameof(disableWarning), 2f);
+                Invoke(nameof(DisableWarning), 2f);
                 return;
             }
             if(candidate.IsHuman() && candidate.PlayerDecision == true) {
@@ -78,7 +78,7 @@ public class ShiftManager : MonoBehaviour {
         loadEventChannel.RaiseEvent(reportScene, SceneLoadType.Immediate);
     }
 
-    private void disableWarning() {
+    private void DisableWarning() {
         undecidedText.enabled = false;
     }
 }

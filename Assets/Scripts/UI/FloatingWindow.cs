@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 
-using TMPro;
-
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +17,10 @@ public sealed class FloatingWindow : MonoBehaviour {
         _canvas = GetComponentInParent<Canvas>();
         _canvasTransform = _canvas.transform as RectTransform;
         _windowTransform = transform as RectTransform;
+    }
+
+    private void Start() {
+        StartCoroutine(DeferMoveWindow(Vector2.zero));
     }
 
     public void MoveWindow(Vector2 delta) {

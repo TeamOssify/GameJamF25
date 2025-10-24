@@ -11,14 +11,28 @@ public class CandidateManager : MonoBehaviour {
     [SerializeField] private CandidateDatabase db;
     [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
     [SerializeField] private ShiftManager shiftManager;
+    [SerializeField] private ShiftTimer shiftTimer;
     [SerializeField] private DecisionUIManager decisionUIManager;
     [SerializeField] private TMP_InputField notesText;
 
+    private bool _canLoadNextCandidate = true;
     private CandidateInstance _currentCandidate;
     private readonly HashSet<CandidateInstance> _interviewedCandidates = new();
 
+    private void OnEnable() {
+        shiftTimer.OnTimerEnd += OnTimerEnd;
+    }
+
+    private void OnDisable() {
+        shiftTimer.OnTimerEnd -= OnTimerEnd;
+    }
+
+    private void OnTimerEnd() {
+        _canLoadNextCandidate = false;
+    }
+
     public void LoadNextCandidate() {
-        if (candidatePhysicalManager.IsCandidatePresent) {
+        if (!candidateEventChannel || candidatePhysicalManager.IsCandidatePresent) {
             return;
         }
 
