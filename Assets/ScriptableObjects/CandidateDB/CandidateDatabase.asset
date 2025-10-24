@@ -15,5 +15,7 @@ MonoBehaviour:
   allCandidates:
   - {fileID: 11400000, guid: 912be53287a3a0542bb4348af34cac24, type: 2}
   - {fileID: 11400000, guid: 3e2cfb78a4ca22543b582d7973a56f70, type: 2}
+  - {fileID: 11400000, guid: 8f9eaff2564795649baa07435f51f04d, type: 2}
+  - {fileID: 11400000, guid: 869bd4a1b65285d4aa95b4d27dfeb08b, type: 2}
   bodyLanguages:
   - {fileID: 11400000, guid: 2589b59852759394b93f067957f165f0, type: 2}
