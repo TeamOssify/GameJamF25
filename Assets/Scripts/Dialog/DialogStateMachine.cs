@@ -11,6 +11,9 @@ public sealed class DialogStateMachine {
     private int _currentIndex = -1;
 
     public DialogStateMachine(DialogFile.DialogTree dialogTree) {
+        Debug.Assert(dialogTree != null, "dialogTree != null");
+        Debug.Assert(dialogTree.Tree != null, "dialogTree.Tree != null");
+
         _dialogTree = dialogTree.Tree;
     }
 

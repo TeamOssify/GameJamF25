@@ -18,7 +18,7 @@ public class RoomMoodManager : MonoBehaviour {
         float affinity = Mathf.Max(value, 0f);     // update the negative values to 0
 
         // Change light colour to red based on how many mistakes were made
-        lamp.color = Color.Lerp(Color.white, Color.red, affinity * 0.1f); 
+        lamp.color = Color.Lerp(Color.white, Color.red, affinity * 0.1f);
 
         entranceLight.color = Color.Lerp(Color.white, Color.red, affinity * 0.1f);
 
@@ -33,7 +33,5 @@ public class RoomMoodManager : MonoBehaviour {
         if (spotLight != null) {
             spotLight.intensity = Mathf.Clamp(1f + (affinity * 0.2f), 1f, 2f);
         }
-
-        
     }
 }

@@ -21,14 +21,12 @@ public class ConversationWindow : MonoBehaviour {
     [SerializeField] private AudioClip newMessageSound;
     [SerializeField] private float newMessageVolume = 0.2f;
 
-    private bool _isNewTree = false;
+    private Coroutine _dialogCoroutine;
     private readonly Queue<(DialogOwner owner, string message)> _dialogQueue = new();
     private readonly Queue<string> _questionQueue = new();
     private readonly List<PlayerQuestion> _currentQuestions = new();
 
     private void OnEnable() {
-        StartCoroutine(ListenForDialog());
-
         dialogEventChannel.OnClearDialog += OnClearDialog;
         dialogEventChannel.OnNewDialogTree += OnNewDialogTree;
         dialogEventChannel.OnNewDialogMessage += OnNewDialogMessage;
@@ -45,7 +43,15 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     private void OnNewDialogTree() {
-        _isNewTree = true;
+        InstantiateTreeSeparator();
+    }
+
+    private void RunDialogRenderer() {
+        lock (_dialogCoroutine) {
+            if (_dialogCoroutine == null) {
+                _dialogCoroutine = StartCoroutine(CoRenderDialog());
+            }
+        }
     }
 
     private void OnClearDialog() {
@@ -57,27 +63,25 @@ public class ConversationWindow : MonoBehaviour {
 
     private void OnNewDialogMessage(DialogOwner owner, string message) {
         _dialogQueue.Enqueue((owner, message));
+
+        RunDialogRenderer();
     }
 
     private void OnNewPlayerQuestions(string[] questions) {
         foreach (var question in questions) {
             _questionQueue.Enqueue(question);
         }
+
+        RunDialogRenderer();
     }
 
     private void OnChosenPlayerQuestion(string question) {
         OnNewDialogMessage(DialogOwner.Player, question);
     }
 
-    // Hack to fix weird layout issues
-    private IEnumerator ListenForDialog() {
-        while (enabled) {
+    private IEnumerator CoRenderDialog() {
+        while (_dialogQueue.Count > 0 && _questionQueue.Count > 0) {
             var created = false;
-
-            if (_isNewTree && (_dialogQueue.Count > 0 || _questionQueue.Count > 0)) {
-                _isNewTree = false;
-                InstantiateTreeSeparator();
-            }
 
             if (!created && _dialogQueue.TryDequeue(out var dialog)) {
                 InstantiateMessage(dialog.owner, dialog.message);
@@ -100,11 +104,10 @@ public class ConversationWindow : MonoBehaviour {
                 // Must occur after waiting
                 LayoutRebuilder.ForceRebuildLayoutImmediate(windowContents);
             }
+        }
 
-            // CPU optimization
-            if (_dialogQueue.Count == 0 && _questionQueue.Count == 0) {
-                yield return WaitForSecondsCache.Get(0.25f);
-            }
+        lock (_dialogCoroutine) {
+            _dialogCoroutine = null;
         }
     }
 
