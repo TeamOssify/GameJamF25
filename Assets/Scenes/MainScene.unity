@@ -409,7 +409,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731827931}
   m_HandleRect: {fileID: 1731827930}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1223,7 +1223,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -1673,12 +1673,16 @@ PrefabInstance:
       value: DecisionMenuContainer
       objectReference: {fileID: 0}
     - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: hidePosition.x
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392485415046443692, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: showPosition.x
       value: 1055
       objectReference: {fileID: 0}
     - target: {fileID: 5868953874930387927, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1290
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 7784777096932995380, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1952,7 +1956,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -2184,7 +2188,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: [{fileID: 8169745179051486146, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}]
+    m_RemovedGameObjects:
+    - {fileID: 8169745179051486146, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
