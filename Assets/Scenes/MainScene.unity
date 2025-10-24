@@ -881,6 +881,17 @@ Light:
   m_CorrespondingSourceObject: {fileID: 7974667964839950685, guid: 73f5afe66b06703438de92bfa3108fa5, type: 3}
   m_PrefabInstance: {fileID: 5842514564347318216}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &626438715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+  m_PrefabInstance: {fileID: 84325662113671039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &628270397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1612,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 853917460}
     m_Modifications:
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_text
+      value: You have one or more undecided candidates
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927731731899319455, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712077362887543392, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3782323738216273844, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1692,6 +1755,14 @@ PrefabInstance:
     - target: {fileID: 7863249129954515567, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946666805175733513, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946666805175733513, guid: 72fb7070dbf10c6409f7d8690886259c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2024,6 +2095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LOCAL MANAGERS
       objectReference: {fileID: 0}
+    - target: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: undecidedText
+      value: 
+      objectReference: {fileID: 626438715}
     - target: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: roomMoodManager
       value: 

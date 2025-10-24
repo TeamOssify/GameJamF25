@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 using Eflatun.SceneReference;
 
+using TMPro;
+
 using UnityEngine;
 
 public class ShiftManager : MonoBehaviour {
@@ -12,6 +14,7 @@ public class ShiftManager : MonoBehaviour {
     [SerializeField] private SceneReference reportScene;
     [SerializeField] private CandidateManager candidateManager;
     [SerializeField] private RoomMoodManager roomMoodManager;  // Changing the mood of the room after shifts
+    [SerializeField] private TextMeshProUGUI undecidedText;
 
     //starts timer and increments shift number
     public void StartShift() {
@@ -34,7 +37,8 @@ public class ShiftManager : MonoBehaviour {
 
         foreach (var candidate in interviewedCandidates) {
             if (candidate.PlayerDecision == null) {
-                Debug.Log("Cannot end shift because there is undecided candidates");
+                undecidedText.enabled = true;
+                Invoke(nameof(disableWarning), 2f);
                 return;
             }
             if(candidate.IsHuman() && candidate.PlayerDecision == true) {
@@ -53,5 +57,9 @@ public class ShiftManager : MonoBehaviour {
         }
 
         loadEventChannel.RaiseEvent(reportScene, SceneLoadType.Immediate);
+    }
+
+    private void disableWarning() {
+        undecidedText.enabled = false;
     }
 }
