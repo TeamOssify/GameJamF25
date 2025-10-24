@@ -14,7 +14,7 @@
             "Player": "I don't get paid enough for this...",
             "PlayerResponses": {
               "Hello. Let us begin": "C_ReplyHello",
-              "Screw off.": "C_ReplyScrewOff"
+              "You'll be fun...": "C_ReplyScrewOff"
             }
           },
           {
@@ -24,7 +24,7 @@
           },
           {
             "Label": "C_ReplyScrewOff",
-            "Candidate": "Screw you too!",
+            "Candidate": "Screw off!",
             "Stop": true
           }
         ]
@@ -83,16 +83,16 @@
             "Player": "You are alone walking along a beach and see a turtle stuck on its back. What would you do?"
           },
           {
-            "Candidate": "I’d be worried about being bit. The turtle could have some disease, so I wouldn’t want to go up and handle it."
+            "Candidate": "I'd be worried about being bit. The turtle could have some disease, so I wouldn't want to go up and handle it."
           },
           {
             "Player": "So, you would just ignore the turtle?"
           },
           {
-            "Candidate": "No, no. I just wouldn’t want to move it with my bare hands."
+            "Candidate": "No, no. I just wouldn't want to move it with my bare hands."
           },
           {
-            "Candidate": "I’d probably look around and see if there’s something like a stick or another item that I could use to flip it over from a distance."
+            "Candidate": "I'd probably look around and see if there's something like a stick or another item that I could use to flip it over from a distance."
           }
         ]
       }
@@ -104,7 +104,7 @@
             "Player": "You decide to invite some people over for dinner. Who do you invite?"
           },
           {
-            "Candidate": "Ran out of  time :("
+            "Candidate": "I'd enjoy the sight for some time, but I'd probably continue my walk soon after."
           }
         ]
       }
@@ -116,7 +116,7 @@
             "Player": "You decide to invite some people over for dinner. Who do you invite?"
           },
           {
-            "Candidate": "Ran out of  time :("
+            "Candidate": "I'd invite some close friends over. It'd be nice to spend some time with them"
           }
         ]
       }
@@ -182,16 +182,16 @@
             "Player": "You are alone walking along a beach and see a turtle stuck on its back. What would you do?"
           },
           {
-            "Candidate": "I’d be worried about being bit. The turtle could have some disease, so I wouldn’t want to go up and handle it."
+            "Candidate": "I'd be worried about being bit. The turtle could have some disease, so I wouldn't want to go up and handle it."
           },
           {
             "Player": "So, you would just ignore the turtle?"
           },
           {
-            "Candidate": "No, no. I just wouldn’t want to move it with my bare hands."
+            "Candidate": "No, no. I just wouldn't want to move it with my bare hands."
           },
           {
-            "Candidate": "I’d probably look around and see if there’s something like a stick or another item that I could use to flip it over from a distance."
+            "Candidate": "I'd probably look around and see if there's something like a stick or another item that I could use to flip it over from a distance."
           }
         ]
       }
@@ -203,7 +203,7 @@
             "Player": "You are walking through the woods alone and see a lone deer. How do you feel?"
           },
           {
-            "Candidate": "I’d think it was pretty.",
+            "Candidate": "I'd think it was pretty.",
             "PlayerResponses": {
               "Alright.": "Accept",
               "Please expand.": "Expand"
@@ -219,7 +219,7 @@
             "Candidate": "Oh, umm- what was that the wrong answer or something?"
           },
           {
-            "Candidate": "Well this is a test, isn’t it? So there are right and wrong answers.",
+            "Candidate": "Well this is a test, isn't it? So there are right and wrong answers.",
             "Stop": true
           }
         ]
@@ -230,10 +230,10 @@
             "Player": "You are walking through the woods alone and see a lone deer. How do you feel?"
           },
           {
-            "Candidate": "Okay, I’d probably think- umm- I’m not really sure what I’d think. I’ve never seen a deer before."
+            "Candidate": "Okay, I'd probably think- umm- I'm not really sure what I'd think. I've never seen a deer before."
           },
           {
-            "Candidate": "I guess I’d probably think it was pretty. That’s what most people think, right?"
+            "Candidate": "I guess I'd probably think it was pretty. That's what most people think, right?"
           }
         ]
       }
