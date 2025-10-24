@@ -139,4 +139,8 @@ public class ConversationWindow : MonoBehaviour {
 
         dialogEventChannel.RaiseChosenPlayerQuestion(question);
     }
+
+    public void QuestionButtonOnClick() {
+
+    }
 }
