@@ -1794,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7688141957865028973, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_Name
-      value: Conversation WIndow Variant
+      value: Conversation WIndow
       objectReference: {fileID: 0}
     - target: {fileID: 7771968241067961996, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2050,6 +2050,9 @@ MonoBehaviour:
   playerMessagePrefab: {fileID: 5981690602723662063, guid: 940fa03217240964d99f8beaf1250cfe, type: 3}
   questionPrefab: {fileID: 8026000141985598920, guid: 04845b17732dffa4586e69a975f68000, type: 3}
   windowContents: {fileID: 2302927214296322277}
+  sfxEventChannel: {fileID: 11400000, guid: d1e447e9470eaae4e97e650dcf95c48f, type: 2}
+  newMessageSound: {fileID: 8300000, guid: 41c1b829d0b9401469b15dc1a92a8808, type: 3}
+  newMessageVolume: 0.2
 --- !u!224 &2302927214296322277 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6949071490836706392, guid: 5fcc1dd5b321ce245944ab06dfe40c36, type: 3}

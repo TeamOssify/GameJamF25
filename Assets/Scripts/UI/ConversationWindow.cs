@@ -5,11 +5,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ConversationWindow : MonoBehaviour {
+    [Header("Dialog")]
     [SerializeField] private DialogEventChannelSO dialogEventChannel;
     [SerializeField] private DialogMessage candidateMessagePrefab;
     [SerializeField] private DialogMessage playerMessagePrefab;
     [SerializeField] private PlayerQuestion questionPrefab;
     [SerializeField] private RectTransform windowContents;
+
+    [Header("Sound")]
+    [SerializeField] private SfxEventChannelSO sfxEventChannel;
+    [SerializeField] private AudioClip newMessageSound;
+    [SerializeField] private float newMessageVolume = 0.2f;
 
     private readonly Queue<(DialogOwner owner, string message)> _dialogQueue = new();
     private readonly Queue<string> _questionQueue = new();
@@ -58,9 +64,15 @@ public class ConversationWindow : MonoBehaviour {
                 created = true;
             }
 
+            if (created) {
+                // We want this to happen as close to instantiation as possible to make it feel good
+                sfxEventChannel.OnPlayVolumedSoundEffect(newMessageSound, newMessageVolume);
+            }
+
             yield return WaitForSecondsCache.Get(0.05f);
 
             if (created) {
+                // Must occur after waiting
                 LayoutRebuilder.ForceRebuildLayoutImmediate(windowContents);
             }
         }
