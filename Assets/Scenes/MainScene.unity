@@ -2049,6 +2049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Question (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7899768662794192340, guid: deed2e8e838092f4bae7eada47410b3b, type: 3}
+      propertyPath: dialogTreeType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9180111007870876851, guid: deed2e8e838092f4bae7eada47410b3b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 595.26
