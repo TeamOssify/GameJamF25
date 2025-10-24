@@ -153,10 +153,31 @@
       null
     ],
     "YouSeeADeer": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You are walking through the woods alone and see a lone deer. How do you feel?"
+          },
+          {
+            "Candidate": "It's always nice to see a piece of nature like that.",
+            "PlayerResponses": {
+              "": ""
+            }
+          },
+        ]
+      }
     ],
     "WhoWouldYouBringForDinner": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You decide to invite some people over for dinner. Who do you invite?"
+          },
+          {
+            "Candidate": "I'd invite my family over. I'd like to make sure we stayed amicable, and this would be a good opportunity for that."
+          }
+        ]
+      }
     ]
   }
 }

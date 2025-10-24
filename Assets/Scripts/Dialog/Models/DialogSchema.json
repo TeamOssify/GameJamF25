@@ -79,32 +79,16 @@
           }
         },
         "YouAndYourChildAreStarving": {
-          "type": "array",
-          "items": {
-            "description": "A sequence of dialog entries.",
-            "$ref": "#/properties/Human/properties/Intro/items"
-          }
+          "$ref": "#/properties/Human/properties/Intro"
         },
         "YouSeeAStuckTurtle": {
-          "type": "array",
-          "items": {
-            "description": "A sequence of dialog entries.",
-            "$ref": "#/properties/Human/properties/Intro/items"
-          }
+          "$ref": "#/properties/Human/properties/Intro"
         },
         "YouSeeADeer": {
-          "type": "array",
-          "items": {
-            "description": "A sequence of dialog entries.",
-            "$ref": "#/properties/Human/properties/Intro/items"
-          }
+          "$ref": "#/properties/Human/properties/Intro"
         },
         "WhoWouldYouBringForDinner": {
-          "type": "array",
-          "items": {
-            "description": "A sequence of dialog entries.",
-            "$ref": "#/properties/Human/properties/Intro/items"
-          }
+          "$ref": "#/properties/Human/properties/Intro"
         }
       }
     },
@@ -116,9 +100,17 @@
           "description": "Intro dialog.",
           "$ref": "#/properties/Human/properties/Intro"
         },
-        "TurtleQuestion": {
-          "description": "Turtle question dialog.",
-          "$ref": "#/properties/Human/properties/TurtleQuestion"
+        "YouAndYourChildAreStarving": {
+          "$ref": "#/properties/Human/properties/Intro"
+        },
+        "YouSeeAStuckTurtle": {
+          "$ref": "#/properties/Human/properties/Intro"
+        },
+        "YouSeeADeer": {
+          "$ref": "#/properties/Human/properties/Intro"
+        },
+        "WhoWouldYouBringForDinner": {
+          "$ref": "#/properties/Human/properties/Intro"
         }
       }
     }
