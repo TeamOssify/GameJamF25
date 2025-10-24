@@ -241,9 +241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShiftTimer
   shiftDuration: 180
   timerText: {fileID: 0}
-  OnTimerEnd:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1567683208225895032
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +430,7 @@ MonoBehaviour:
   db: {fileID: 11400000, guid: 3aeb83a1a8db4604e9530d5eb9fc3b54, type: 2}
   candidatePhysicalManager: {fileID: 0}
   shiftManager: {fileID: 175555095429469996}
+  shiftTimer: {fileID: 2293661282723320965}
   decisionUIManager: {fileID: 6869008292193003053}
   notesText: {fileID: 0}
 --- !u!1 &8802837867427300532

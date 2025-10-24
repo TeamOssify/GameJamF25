@@ -99,6 +99,11 @@ public class ConversationWindow : MonoBehaviour {
                 // Must occur after waiting
                 LayoutRebuilder.ForceRebuildLayoutImmediate(windowContents);
             }
+
+            // CPU optimization
+            if (_dialogQueue.Count == 0 && _questionQueue.Count == 0) {
+                yield return WaitForSecondsCache.Get(0.25f);
+            }
         }
     }
 
