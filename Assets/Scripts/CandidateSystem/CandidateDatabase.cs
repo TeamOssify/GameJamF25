@@ -4,13 +4,13 @@ using UnityEngine;
 public class CandidateDatabase : ScriptableObject {
     [Header("All Candidates")]
     [SerializeField]
-    private Candidate[] allCandidates;
+    private CandidateSO[] allCandidates;
 
     [Header("Body Languages")]
     [SerializeField]
     private BodyLanguageBehavior[] bodyLanguages;
 
-    public Candidate GetRandomCandidate() {
+    public CandidateSO GetRandomCandidate() {
         if (allCandidates.Length > 0) {
             return allCandidates[Random.Range(0, allCandidates.Length)];
         }

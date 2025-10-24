@@ -1,8 +1,8 @@
 using UnityEngine;
 
 public class MoneyManager : MonoBehaviour {
+    [SerializeField] private MoneyDataSO money;
 
-    [SerializeField] private MoneyData money;
     public void AddMoney(int amount) {
         money.currentBalance += amount;
     }

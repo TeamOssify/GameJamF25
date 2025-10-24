@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 using Eflatun.SceneReference;
 
 using TMPro;
@@ -7,19 +5,39 @@ using TMPro;
 using UnityEngine;
 
 public class ShiftManager : MonoBehaviour {
-    [SerializeField] private MoneyManager moneyManager;
+    [SerializeField] private CandidateEventChannelSO candidateEventChannel;
+    [SerializeField] private LoadEventChannelSO loadEventChannel;
     [SerializeField] private ShiftData shiftData;
     [SerializeField] private ShiftTimer shiftTimer;
-    [SerializeField] private LoadEventChannelSO loadEventChannel;
     [SerializeField] private SceneReference reportScene;
     [SerializeField] private CandidateManager candidateManager;
     [SerializeField] private RoomMoodManager roomMoodManager;  // Changing the mood of the room after shifts
     [SerializeField] private TextMeshProUGUI undecidedText;
 
-    //starts timer and increments shift number
+    private void OnEnable() {
+        candidateEventChannel.OnCandidateSatDown += OnCandidateSatDown;
+        candidateEventChannel.OnCandidateExited += OnCandidateExited;
+    }
+
+    private void OnDisable() {
+        candidateEventChannel.OnCandidateSatDown -= OnCandidateSatDown;
+        candidateEventChannel.OnCandidateExited -= OnCandidateExited;
+    }
+
+    private void OnCandidateSatDown(CandidateInstance arg0) {
+        if (!shiftTimer.TimerStarted) {
+            StartShift();
+        }
+    }
+
+    private void OnCandidateExited(CandidateInstance arg0) {
+        CheckShiftEnd();
+    }
+
+    // starts timer and increments shift number
     public void StartShift() {
         shiftTimer.StartTimer();
-        shiftData.shiftNumber++;
+        shiftData.ShiftNumber++;
     }
 
     // checks if the shift should end and ends it
@@ -48,6 +66,7 @@ public class ShiftManager : MonoBehaviour {
                 incorrect++;
             }
         }
+
         shiftData.candidatesProcessedCorrectly = correct;
         shiftData.candidatesProcessedIncorrectly = incorrect;
 

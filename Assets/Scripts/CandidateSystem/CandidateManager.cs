@@ -1,11 +1,13 @@
 using System.Collections;
 
 using UnityEngine;
+
 using System.Collections.Generic;
 
 using TMPro;
 
 public class CandidateManager : MonoBehaviour {
+    [SerializeField] private CandidateEventChannelSO candidateEventChannel;
     [SerializeField] private CandidateDatabase db;
     [SerializeField] private CandidatePhysicalManager candidatePhysicalManager;
     [SerializeField] private ShiftManager shiftManager;
@@ -23,18 +25,19 @@ public class CandidateManager : MonoBehaviour {
         _currentCandidate = db.CreateRandomCandidateInstance();
 
         if (_currentCandidate != null) {
-            BringInCandidate();
+            StartCoroutine(BringInCandidate());
             decisionUIManager.AddCandidate(_currentCandidate);
             notesText.text = "";
-            if (_interviewedCandidates.Count == 0) {
-                shiftManager.StartShift();
-            }
         }
     }
 
-    private void BringInCandidate() {
+    private IEnumerator BringInCandidate() {
         candidatePhysicalManager.SpawnCandidateImage(_currentCandidate);
-        candidatePhysicalManager.WalkToChair();
+        candidateEventChannel.RaiseCandidateEntered(_currentCandidate);
+
+        yield return candidatePhysicalManager.WalkToChair();
+
+        candidateEventChannel.RaiseCandidateSatDown(_currentCandidate);
     }
 
     public void KickCurrentCandidate() {
@@ -43,10 +46,15 @@ public class CandidateManager : MonoBehaviour {
             _interviewedCandidates.Add(_currentCandidate);
         }
 
-        candidatePhysicalManager.WalkToDoor();
+        StartCoroutine(CoKickCurrentCandidate());
+    }
 
-        // need wait until candidate leaves to end shift
-        shiftManager.CheckShiftEnd();
+    public IEnumerator CoKickCurrentCandidate() {
+        candidateEventChannel.RaiseCandidateStoodUp(_currentCandidate);
+
+        yield return candidatePhysicalManager.WalkToDoor();
+
+        candidateEventChannel.RaiseCandidateExited(_currentCandidate);
     }
 
     public CandidateInstance GetCurrentCandidate() {

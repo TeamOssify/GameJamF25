@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CandidateInstance {
-    public Candidate CharacterData { get; private set; }
-    public CandidateVariant CurrentVariant { get; private set; }
+    public CandidateSO CharacterData { get; private set; }
+    public CandidateVariantSO CurrentVariant { get; private set; }
 
     public string GeneratedFirstName { get; private set; }
     public string GeneratedLastName { get; private set; }
@@ -16,7 +16,7 @@ public class CandidateInstance {
     public List<Question> AskedQuestions { get; private set; }
     public bool HasBeenInterviewed { get; set; }
 
-    public CandidateInstance(Candidate characterData, CandidateVariant variant) {
+    public CandidateInstance(CandidateSO characterData, CandidateVariantSO variant) {
         CharacterData = characterData;
         CurrentVariant = variant;
         AskedQuestions = new List<Question>();

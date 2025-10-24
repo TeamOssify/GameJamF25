@@ -29,7 +29,6 @@ public class ShiftReportManager : MonoBehaviour {
     void Awake() {
         UpdateShiftReportUI();
         UpdateBalance();
-
     }
 
     public void SleepButtonPressed() {
@@ -51,7 +50,7 @@ public class ShiftReportManager : MonoBehaviour {
     }
 
     private void UpdateShiftReportUI() {
-        dayText.text = "Day " + shiftData.shiftNumber;
+        dayText.text = "Day " + shiftData.ShiftNumber;
 
         correctProcessedText.text = "Correct: " + shiftData.candidatesProcessedCorrectly;
         incorrectProcessedText.text = "Incorrect: " + shiftData.candidatesProcessedIncorrectly;

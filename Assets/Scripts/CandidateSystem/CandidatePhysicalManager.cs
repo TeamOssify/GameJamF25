@@ -35,23 +35,23 @@ public class CandidatePhysicalManager : MonoBehaviour {
         candidateTransform.position = doorTarget.position;
     }
 
-    public void WalkToChair() {
+    public IEnumerator WalkToChair() {
         if (!IsCandidatePresent) {
-            return;
+            yield break;
         }
 
         if (!_isWalking) {
-            StartCoroutine(WalkToChairSequence());
+            yield return WalkToChairSequence();
         }
     }
 
-    public void WalkToDoor() {
+    public IEnumerator WalkToDoor() {
         if (!IsCandidatePresent) {
-            return;
+            yield break;
         }
 
         if (!_isWalking) {
-            StartCoroutine(WalkToDoorSequence());
+            yield return WalkToDoorSequence();
         }
     }
 

@@ -1,22 +1,22 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Candidate", menuName = "Scriptable Objects/Candidate")]
-public class Candidate : ScriptableObject {
+public class CandidateSO : ScriptableObject {
     [Header("Character Identity")]
     public string characterName;
 
     [Header("Variants")]
     [Tooltip("Human version of this character")]
-    public CandidateVariant humanVariant;
+    public CandidateVariantSO humanVariant;
 
     [Tooltip("Non-Human version of this character")]
-    public CandidateVariant nonHumanVariant;
+    public CandidateVariantSO nonHumanVariant;
 
-    public CandidateVariant GetRandomVariant() {
+    public CandidateVariantSO GetRandomVariant() {
         return Random.value > 0.5f ? humanVariant : nonHumanVariant;
     }
 
-    public CandidateVariant GetVariant(CandidateDataStructures.CandidateType type) {
+    public CandidateVariantSO GetVariant(CandidateDataStructures.CandidateType type) {
         return type == CandidateDataStructures.CandidateType.Human ?humanVariant : nonHumanVariant;
     }
 }

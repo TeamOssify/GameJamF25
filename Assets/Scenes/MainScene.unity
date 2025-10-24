@@ -409,7 +409,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731827931}
   m_HandleRect: {fileID: 1731827930}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1223,7 +1223,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -1952,7 +1952,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537841508369971611, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
     - target: {fileID: 1614812793248586780, guid: 3ae09ffa042e0fb49b8a853eaa78865a, type: 3}
@@ -2107,22 +2107,10 @@ PrefabInstance:
       propertyPath: undecidedText
       value: 
       objectReference: {fileID: 626438715}
-    - target: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
-      propertyPath: roomMoodManager
-      value: 
-      objectReference: {fileID: 2896187697971957955}
-    - target: {fileID: 175555095429469996, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
-      propertyPath: candidateManager
-      value: 
-      objectReference: {fileID: 346357617}
     - target: {fileID: 956918938496004386, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: lamp
       value: 
       objectReference: {fileID: 371164325}
-    - target: {fileID: 956918938496004386, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
-      propertyPath: backWall
-      value: 
-      objectReference: {fileID: 2100000, guid: 14111511ba0fa904481ddb9044eb9868, type: 2}
     - target: {fileID: 956918938496004386, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: spotLight
       value: 
@@ -2196,21 +2184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects: [{fileID: 8169745179051486146, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}]
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
---- !u!114 &2896187697971957955 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 956918938496004386, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
-  m_PrefabInstance: {fileID: 2896187697971957954}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9c839ce985cd54ea100eff8ab64aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1001 &3137586789539304787
 PrefabInstance:
   m_ObjectHideFlags: 0

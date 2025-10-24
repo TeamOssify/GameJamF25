@@ -2,7 +2,19 @@
 
 [CreateAssetMenu(fileName = "ShiftData", menuName = "Scriptable Objects/ShiftData")]
 public class ShiftData : ScriptableObject {
-    public int shiftNumber;
+    private int _shiftNumber;
+    public int ShiftNumber {
+        get { return _shiftNumber; }
+        set {
+            _shiftNumber = value;
+
+            // We haven't completed this shift yet
+            var shiftMinusOne = value - 1;
+            if (shiftMinusOne > PlayerPrefs.GetInt(Constants.PlayerPrefsKeys.HIGH_SCORE)) {
+                PlayerPrefs.SetInt(Constants.PlayerPrefsKeys.HIGH_SCORE, shiftMinusOne);
+            }
+        }
+    }
 
     public int candidatesProcessedCorrectly;
     public int candidatesProcessedIncorrectly;
@@ -14,9 +26,6 @@ public class ShiftData : ScriptableObject {
 
     public void ResetAll() {
         ResetForNextShift();
-        if (shiftNumber > PlayerPrefs.GetInt(Constants.PlayerPrefsKeys.HIGH_SCORE)) {
-            PlayerPrefs.SetInt(Constants.PlayerPrefsKeys.HIGH_SCORE, shiftNumber);
-        }
-        shiftNumber = 0;
+        ShiftNumber = 0;
     }
 }

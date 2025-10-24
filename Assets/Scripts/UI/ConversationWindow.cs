@@ -24,15 +24,24 @@ public class ConversationWindow : MonoBehaviour {
     private void OnEnable() {
         StartCoroutine(ListenForDialog());
 
+        dialogEventChannel.OnClearDialog += OnClearDialog;
         dialogEventChannel.OnNewDialogMessage += OnNewDialogMessage;
         dialogEventChannel.OnNewPlayerQuestions += OnNewPlayerQuestions;
         dialogEventChannel.OnChosenPlayerQuestion += OnChosenPlayerQuestion;
     }
 
     private void OnDisable() {
+        dialogEventChannel.OnClearDialog -= OnClearDialog;
         dialogEventChannel.OnNewDialogMessage -= OnNewDialogMessage;
         dialogEventChannel.OnNewPlayerQuestions -= OnNewPlayerQuestions;
         dialogEventChannel.OnChosenPlayerQuestion -= OnChosenPlayerQuestion;
+    }
+
+    private void OnClearDialog() {
+        var childCount = windowContents.childCount;
+        for (var i = 0; i < childCount; i++) {
+            Destroy(windowContents.GetChild(i).gameObject);
+        }
     }
 
     private void OnNewDialogMessage(DialogOwner owner, string message) {

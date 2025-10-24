@@ -5,11 +5,16 @@ using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Events/Dialog Event Channel")]
 public sealed class DialogEventChannelSO : ScriptableObject {
+    public UnityAction OnClearDialog;
     public UnityAction<DialogOwner, string> OnNewDialogMessage;
-
     public UnityAction<string[]> OnNewPlayerQuestions;
-
     public UnityAction<string> OnChosenPlayerQuestion;
+
+    public void RaiseClearDialog() {
+        Debug.Assert(OnClearDialog != null, "OnClearDialog != null");
+
+        OnClearDialog.Invoke();
+    }
 
     public void RaiseOnNewDialogMessage(DialogOwner owner, string message) {
         Debug.Assert(message != null, "Null dialog message was passed to dialog event channel!");

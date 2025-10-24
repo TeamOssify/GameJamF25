@@ -16,7 +16,7 @@ public class FailureUI : MonoBehaviour
 
 
     private void Awake() {
-        daysNumber.text = shiftData.shiftNumber.ToString();
+        daysNumber.text = shiftData.ShiftNumber.ToString();
         shiftData.ResetAll();
     }
 

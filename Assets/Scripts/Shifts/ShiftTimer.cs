@@ -12,6 +12,7 @@ public class ShiftTimer : MonoBehaviour {
     private float _currentTime;
     private bool _timerActive;
 
+    public bool TimerStarted => _timerActive;
     public bool TimerEnded => !_timerActive;
     public UnityEvent OnTimerEnd;
 
@@ -20,7 +21,7 @@ public class ShiftTimer : MonoBehaviour {
     }
 
     public void StartTimer() {
-        _currentTime = shiftDuration;
+        _currentTime = shiftDuration + 0.99f;
         _timerActive = true;
     }
 
