@@ -9,6 +9,7 @@ public sealed class DialogManager : MonoBehaviour {
 
     [SerializeField] private CandidateDialogSO generalDialog;
 
+    private CandidateInstance _currentCandidate;
     private DialogStateMachine _dialogStateMachine;
     private bool _questionPending;
     private string _chosenReply;
@@ -18,6 +19,7 @@ public sealed class DialogManager : MonoBehaviour {
         candidateEventChannel.OnCandidateSatDown += OnCandidateSatDown;
         candidateEventChannel.OnCandidateStoodUp += OnCandidateStoodUp;
         dialogEventChannel.OnChosenPlayerQuestion += OnChosenPlayerQuestion;
+        dialogEventChannel.OnAskStandardQuestion += OnAskStandardQuestion;
     }
 
     private void OnDisable() {
@@ -25,6 +27,7 @@ public sealed class DialogManager : MonoBehaviour {
         candidateEventChannel.OnCandidateSatDown -= OnCandidateSatDown;
         candidateEventChannel.OnCandidateStoodUp -= OnCandidateStoodUp;
         dialogEventChannel.OnChosenPlayerQuestion -= OnChosenPlayerQuestion;
+        dialogEventChannel.OnAskStandardQuestion -= OnAskStandardQuestion;
     }
 
     private void OnCandidateEntered(CandidateInstance candidate) {
@@ -33,17 +36,33 @@ public sealed class DialogManager : MonoBehaviour {
     }
 
     private void OnCandidateSatDown(CandidateInstance candidate) {
+        if (_dialogStateMachine != null) {
+            return;
+        }
+
+        _currentCandidate = candidate;
         StartCoroutine(ShowDialogTree(candidate, DialogTreeType.Intro));
     }
 
     private void OnCandidateStoodUp(CandidateInstance arg0) {
+        _currentCandidate = null;
         _dialogStateMachine.Exit();
     }
 
     private void OnChosenPlayerQuestion(string question) {
-        _chosenReply = question;
         _dialogStateMachine.UsePlayerAnswer(question);
+        _chosenReply = question;
         _questionPending = false;
+    }
+
+    private void OnAskStandardQuestion(DialogTreeType treeType) {
+        if (_dialogStateMachine != null) {
+            return;
+        }
+
+        _chosenReply = null;
+        _questionPending = false;
+        StartCoroutine(ShowDialogTree(_currentCandidate, treeType));
     }
 
     private IEnumerator ShowDialogTree(CandidateInstance candidate, DialogTreeType treeType) {
@@ -54,6 +73,8 @@ public sealed class DialogManager : MonoBehaviour {
 
         _dialogStateMachine = new DialogStateMachine(chosenTree);
         yield return ExecuteDialogStateMachine(_dialogStateMachine);
+
+        _dialogStateMachine = null;
     }
 
     private IEnumerator ExecuteDialogStateMachine(DialogStateMachine stateMachine) {

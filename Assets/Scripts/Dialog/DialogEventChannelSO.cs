@@ -10,6 +10,7 @@ public sealed class DialogEventChannelSO : ScriptableObject {
     public UnityAction<DialogOwner, string> OnNewDialogMessage;
     public UnityAction<string[]> OnNewPlayerQuestions;
     public UnityAction<string> OnChosenPlayerQuestion;
+    public UnityAction<DialogTreeType> OnAskStandardQuestion;
 
     public void RaiseClearDialog() {
         Debug.Assert(OnClearDialog != null, "OnClearDialog != null");
@@ -43,5 +44,12 @@ public sealed class DialogEventChannelSO : ScriptableObject {
         Debug.Assert(OnChosenPlayerQuestion != null, "A player question was chosen, but no listeners were found on the dialog channel!");
 
         OnChosenPlayerQuestion?.Invoke(question);
+    }
+
+    public void RaiseAskStandardQuestion(DialogTreeType treeType) {
+        Debug.Assert(treeType != DialogTreeType.Intro, "treeType != DialogTreeType.Intro");
+        Debug.Assert(OnAskStandardQuestion != null, "OnChosenStandardQuestion != null");
+
+        OnAskStandardQuestion?.Invoke(treeType);
     }
 }
