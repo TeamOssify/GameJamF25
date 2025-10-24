@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Jit
   m_EditorClassIdentifier: Assembly-CSharp::Candidate
   characterName: Evil Cart
-  humanVariant: {fileID: 11400000, guid: 54641e2593bd88e4b897ecb95f43bcb6, type: 2}
-  nonHumanVariant: {fileID: 11400000, guid: 3262b961ab4a04d4d982b98b9cd2014a, type: 2}
+  humanVariants:
+  - {fileID: 11400000, guid: b4b8b36ee37dbb84580a9c60bcc2d4a8, type: 2}
+  nonHumanVariants:
+  - {fileID: 11400000, guid: 5858a83339757da49bb6163506b947ce, type: 2}

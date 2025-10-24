@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Gurtess
   m_EditorClassIdentifier: Assembly-CSharp::Candidate
   characterName: Gurtess
-  humanVariant: {fileID: 11400000, guid: be2259d57f25135448eccc883e9ccb82, type: 2}
-  nonHumanVariant: {fileID: 11400000, guid: b4b8b36ee37dbb84580a9c60bcc2d4a8, type: 2}
+  humanVariants:
+  - {fileID: 11400000, guid: be2259d57f25135448eccc883e9ccb82, type: 2}
+  nonHumanVariants:
+  - {fileID: 11400000, guid: df4144ff67916b04fa6f2fa859d66cc4, type: 2}
