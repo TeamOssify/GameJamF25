@@ -1,0 +1,93 @@
+{
+  "$schema": "../Scripts/Dialog/Models/DialogSchema.json",
+  "Human": {
+    "Intro": [
+      {
+        "Tree": [
+          {
+            "Candidate": "Hello, my name is Charles Entertainment Cheese!"
+          },
+          {
+            "Candidate": "I am the owner of the famous restaurant Chuck E. Cheese."
+          },
+          {
+            "Player": "I don't get paid enough for this shit",
+            "PlayerResponses": {
+              "Hello Charles.": "C_ReplyHello",
+              "Screw off.": "C_ReplyScrewOff"
+            }
+          },
+          {
+            "Label": "C_ReplyHello",
+            "Candidate": "Hello player!",
+            "Stop": true
+          },
+          {
+            "Label": "C_ReplyScrewOff",
+            "Candidate": "Screw you too!",
+            "Stop": true
+          }
+        ]
+      }
+    ],
+    "YouAndYourChildAreStarving": [
+      null
+    ],
+    "YouSeeAStuckTurtle": [
+      {
+        "Tree": [
+          {
+            "Player": "While walking in a desert, Charles, you come across a turtle on it's back. Do you flip it over, or do you leave it to bake in the sun?"
+          },
+          {
+            "Candidate": "Well shucks, I would definitely flip it over in a heartbeat!",
+            "Stop": true
+          }
+        ]
+      },
+      {
+        "Tree": [
+          {
+            "Player": "While walking in a desert, Charles, you come across a turtle on it's back. Do you flip it over, or do you leave it to bake in the sun?"
+          },
+          {
+            "Candidate": "I would never live with myself if I left that turtle unturned!",
+            "Stop": true
+          }
+        ]
+      }
+    ],
+    "YouSeeADeer": [
+      null
+    ],
+    "WhoWouldYouBringForDinner": [
+      null
+    ]
+  },
+  "NonHuman": {
+    "Intro": [
+      {
+        "Tree": [
+          {
+            "Candidate": "Ayo Chuck E. Cheese in the house!"
+          },
+          {
+            "Player": "Oh my god, I'm such a huge fan!!!"
+          }
+        ]
+      }
+    ],
+    "YouAndYourChildAreStarving": [
+      null
+    ],
+    "YouSeeAStuckTurtle": [
+      null
+    ],
+    "YouSeeADeer": [
+      null
+    ],
+    "WhoWouldYouBringForDinner": [
+      null
+    ]
+  }
+}
