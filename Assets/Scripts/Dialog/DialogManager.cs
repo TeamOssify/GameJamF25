@@ -102,6 +102,8 @@ public sealed class DialogManager : MonoBehaviour {
             }
 
             if (nextEntry.PlayerResponses != null) {
+                Debug.Assert(nextEntry.PlayerResponses.Count > 0, "nextEntry.PlayerResponses.Count > 0");
+
                 yield return new WaitForSeconds(Mathf.Max(1.5f, waitTime));
 
                 dialogEventChannel.RaiseNewPlayerQuestions(nextEntry.PlayerResponses.Keys.ToArray());
@@ -111,8 +113,11 @@ public sealed class DialogManager : MonoBehaviour {
                     yield return WaitForSecondsCache.Get(0.1f);
                 }
 
-                waitTime = 1f + (WordCounter.CountWords(_chosenReply) * WAIT_PER_WORD)
-                              + (WordCounter.CountPunctuation(_chosenReply) * WAIT_PER_PUNCTUATION);
+                waitTime = 1f;
+                if (_chosenReply != null) {
+                    waitTime += (WordCounter.CountWords(_chosenReply) * WAIT_PER_WORD) +
+                                (WordCounter.CountPunctuation(_chosenReply) * WAIT_PER_PUNCTUATION);
+                }
 
                 yield return new WaitForSeconds(waitTime);
             }

@@ -25,6 +25,12 @@ public static class DialogTreeChooser {
                 return null;
         }
 
-        return trees[Random.Range(0, trees.Length)];
+        var index = Random.Range(0, trees.Length);
+        var tree = trees[index];
+
+        Debug.Assert(tree != null, $"Dialog tree {treeType} @ index {index} was null!");
+        Debug.Assert(tree.Tree != null, $"Dialog tree entries {treeType} @ index {index} was null!");
+
+        return tree;
     }
 }

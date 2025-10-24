@@ -60,6 +60,10 @@ public class ConversationWindow : MonoBehaviour {
         for (var i = 0; i < childCount; i++) {
             Destroy(windowContents.GetChild(i).gameObject);
         }
+
+        _dialogQueue.Clear();
+        _questionQueue.Clear();
+        _currentQuestions.Clear();
     }
 
     private void OnNewDialogMessage(DialogOwner owner, string message) {
@@ -81,7 +85,7 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     private IEnumerator CoRenderDialog() {
-        while (_dialogQueue.Count > 0 && _questionQueue.Count > 0) {
+        do {
             var created = false;
 
             if (!created && _dialogQueue.TryDequeue(out var dialog)) {
@@ -105,7 +109,7 @@ public class ConversationWindow : MonoBehaviour {
                 // Must occur after waiting
                 LayoutRebuilder.ForceRebuildLayoutImmediate(windowContents);
             }
-        }
+        } while (_dialogQueue.Count > 0 && _questionQueue.Count > 0);
 
         lock (_dialogCoroutineLock) {
             _dialogCoroutine = null;
