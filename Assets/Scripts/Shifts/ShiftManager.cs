@@ -54,12 +54,7 @@ public class ShiftManager : MonoBehaviour {
         var incorrect = 0;
 
         foreach (var candidate in interviewedCandidates) {
-            if (candidate.PlayerDecision == null) {
-                undecidedText.enabled = true;
-                Invoke(nameof(DisableWarning), 2f);
-                return;
-            }
-            if(candidate.IsHuman() && candidate.PlayerDecision == true) {
+            if (candidate.IsHuman() == candidate.PlayerDecision) {
                 correct++;
             }
             else {
