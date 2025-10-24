@@ -7,16 +7,14 @@ public class CandidateSO : ScriptableObject {
 
     [Header("Variants")]
     [Tooltip("Human version of this character")]
-    public CandidateVariantSO humanVariant;
+    public CandidateVariantSO[] humanVariants;
 
     [Tooltip("Non-Human version of this character")]
-    public CandidateVariantSO nonHumanVariant;
+    public CandidateVariantSO[] nonHumanVariants;
 
     public CandidateVariantSO GetRandomVariant() {
-        return Random.value > 0.5f ? humanVariant : nonHumanVariant;
-    }
+        var pool = Random.value > 0.5f ? humanVariants : nonHumanVariants;
 
-    public CandidateVariantSO GetVariant(CandidateDataStructures.CandidateType type) {
-        return type == CandidateDataStructures.CandidateType.Human ?humanVariant : nonHumanVariant;
+        return pool[Random.Range(0, pool.Length)];
     }
 }
