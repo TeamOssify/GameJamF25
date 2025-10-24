@@ -16,6 +16,7 @@ public sealed class DialogManager : MonoBehaviour {
 
     private void OnEnable() {
         candidateEventChannel.OnCandidateEntered += OnCandidateEntered;
+        candidateEventChannel.OnCandidateExited += OnCandidateExited;
         candidateEventChannel.OnCandidateSatDown += OnCandidateSatDown;
         candidateEventChannel.OnCandidateStoodUp += OnCandidateStoodUp;
         dialogEventChannel.OnChosenPlayerQuestion += OnChosenPlayerQuestion;
@@ -24,6 +25,7 @@ public sealed class DialogManager : MonoBehaviour {
 
     private void OnDisable() {
         candidateEventChannel.OnCandidateEntered -= OnCandidateEntered;
+        candidateEventChannel.OnCandidateExited -= OnCandidateExited;
         candidateEventChannel.OnCandidateSatDown -= OnCandidateSatDown;
         candidateEventChannel.OnCandidateStoodUp -= OnCandidateStoodUp;
         dialogEventChannel.OnChosenPlayerQuestion -= OnChosenPlayerQuestion;
@@ -31,16 +33,25 @@ public sealed class DialogManager : MonoBehaviour {
     }
 
     private void OnCandidateEntered(CandidateInstance candidate) {
+        EnsureNoStateMachine();
+
         dialogEventChannel.RaiseClearDialog();
-        _questionPending = false;
+
+        _currentCandidate = candidate;
+    }
+
+    private void OnCandidateExited(CandidateInstance candidate) {
+        EnsureNoStateMachine();
+
+        _currentCandidate = null;
     }
 
     private void OnCandidateSatDown(CandidateInstance candidate) {
         if (_dialogStateMachine != null) {
+            // State machine already exists - player probably asked a question before we sat down
             return;
         }
 
-        _currentCandidate = candidate;
         StartCoroutine(ShowDialogTree(candidate, DialogTreeType.Intro));
     }
 
@@ -50,6 +61,11 @@ public sealed class DialogManager : MonoBehaviour {
     }
 
     private void OnChosenPlayerQuestion(string question) {
+        if (_dialogStateMachine == null) {
+            Debug.Log("Player chose a question but no dialog state machine exists!");
+            return;
+        }
+
         _dialogStateMachine.UsePlayerAnswer(question);
         _chosenReply = question;
         _questionPending = false;
@@ -65,8 +81,15 @@ public sealed class DialogManager : MonoBehaviour {
         StartCoroutine(ShowDialogTree(_currentCandidate, treeType));
     }
 
+    private void EnsureNoStateMachine() {
+        _dialogStateMachine?.Exit();
+        _dialogStateMachine = null;
+
+        _questionPending = false;
+    }
+
     private IEnumerator ShowDialogTree(CandidateInstance candidate, DialogTreeType treeType) {
-        yield return WaitForSecondsCache.Get(1);
+        yield return WaitForSecondsCache.Get(0.5f);
 
         var dialogSet = ChooseRandomDialogSet(candidate);
         var chosenTree = DialogTreeChooser.GetTree(dialogSet, treeType);
@@ -79,7 +102,9 @@ public sealed class DialogManager : MonoBehaviour {
 
     private IEnumerator ExecuteDialogStateMachine(DialogStateMachine stateMachine) {
         const float WAIT_PER_WORD = 0.05f;
-        const float WAIT_PER_PUNCTUATION = 0.2f;
+        const float WAIT_PER_PUNCTUATION = 0.18f;
+
+        dialogEventChannel.RaiseNewDialogTree();
 
         while (stateMachine != null && stateMachine.TryAdvance(out var nextEntry)) {
             var waitTime = 1f;
@@ -117,6 +142,9 @@ public sealed class DialogManager : MonoBehaviour {
                 if (_chosenReply != null) {
                     waitTime += (WordCounter.CountWords(_chosenReply) * WAIT_PER_WORD) +
                                 (WordCounter.CountPunctuation(_chosenReply) * WAIT_PER_PUNCTUATION);
+                }
+                else {
+                    Debug.LogWarning($"{nameof(_chosenReply)} was null! How is this possible??");
                 }
 
                 yield return new WaitForSeconds(waitTime);

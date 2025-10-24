@@ -45,7 +45,10 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     private void OnNewDialogTree() {
-        _isNewTree = true;
+        // Don't put a separator if there's no previous messages
+        if (windowContents.childCount > 0) {
+            _isNewTree = true;
+        }
     }
 
     private void OnClearDialog() {
