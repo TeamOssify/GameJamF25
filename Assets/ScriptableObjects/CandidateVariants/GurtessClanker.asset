@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
-  m_Name: GurtessHuman
+  m_Name: GurtessClanker
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  candidateType: 0
+  candidateType: 1
   fullBodySprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
-  backSprite: {fileID: 21300000, guid: de7c01294d7c421449ffc1f7638acad3, type: 3}
+  backSprite: {fileID: 21300000, guid: c56e8ba4c34613744b099d2ec0a6b685, type: 3}
   portraitSprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
   baseStats:
     age: 21

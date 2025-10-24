@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
-  m_Name: GurtessHuman
+  m_Name: JitOdd
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  candidateType: 0
-  fullBodySprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
-  backSprite: {fileID: 21300000, guid: de7c01294d7c421449ffc1f7638acad3, type: 3}
-  portraitSprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
+  candidateType: 1
+  fullBodySprite: {fileID: 21300000, guid: 622393a431c4e894e9d149d58ab95c49, type: 3}
+  backSprite: {fileID: 21300000, guid: af93429b31e244e45b62626435b7a96f, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 622393a431c4e894e9d149d58ab95c49, type: 3}
   baseStats:
     age: 21
     heightFt: 6'2
-    weightLbs: 200
+    weightLbs: 400
   dialog: {fileID: 0}
   passiveBodyLanguages:
   - {fileID: 0}

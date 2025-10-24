@@ -17,3 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be2259d57f25135448eccc883e9ccb82, type: 2}
   nonHumanVariants:
   - {fileID: 11400000, guid: df4144ff67916b04fa6f2fa859d66cc4, type: 2}
+  - {fileID: 11400000, guid: df4144ff67916b04fa6f2fa859d66cc4, type: 2}
+  - {fileID: 11400000, guid: aa86249113521db4cb58617b7064a9fa, type: 2}
+  - {fileID: 11400000, guid: 8893aceecf15c3247b20795c2c860086, type: 2}

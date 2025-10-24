@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8146309f103b1a2498859022ad0277e8, type: 3}
-  m_Name: EvilCart
+  m_Name: Guy
   m_EditorClassIdentifier: Assembly-CSharp::Candidate
-  characterName: Evil Cart
+  characterName: Guy
   humanVariants:
-  - {fileID: 11400000, guid: 54641e2593bd88e4b897ecb95f43bcb6, type: 2}
+  - {fileID: 11400000, guid: 1bb7dffbc6b4e2f47b38f337184e4046, type: 2}
   nonHumanVariants:
-  - {fileID: 11400000, guid: 3262b961ab4a04d4d982b98b9cd2014a, type: 2}
-  - {fileID: 11400000, guid: cfab04c50be6cbc4cb422ba8c54a139e, type: 2}
-  - {fileID: 11400000, guid: aa20aa5bbdec44145bd1c0acfba30b26, type: 2}
-  - {fileID: 11400000, guid: 3262b961ab4a04d4d982b98b9cd2014a, type: 2}
+  - {fileID: 11400000, guid: 64a22c5e2815eb540a8abf3078f3df85, type: 2}
+  - {fileID: 11400000, guid: 64a22c5e2815eb540a8abf3078f3df85, type: 2}
+  - {fileID: 11400000, guid: 56e6b7bcae30a7c4184ec0249b1e45e8, type: 2}
+  - {fileID: 11400000, guid: 893e7adeaf8d9ab41843a2910739bd9a, type: 2}

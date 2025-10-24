@@ -14,7 +14,11 @@ public class CandidateSO : ScriptableObject {
 
     public CandidateVariantSO GetRandomVariant() {
         var pool = Random.value > 0.5f ? humanVariants : nonHumanVariants;
-
-        return pool[Random.Range(0, pool.Length)];
+        var pick = pool[Random.Range(0, pool.Length)];
+        Debug.Log("Picked");
+        Debug.Log(pick);
+        Debug.Log("from pool");
+        Debug.Log(pool);
+        return pick;
     }
 }

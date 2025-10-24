@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0174f607c303b72478724f3537ccd294, type: 3}
-  m_Name: GurtessHuman
+  m_Name: EvilCartClanker
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
-  candidateType: 0
-  fullBodySprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
-  backSprite: {fileID: 21300000, guid: de7c01294d7c421449ffc1f7638acad3, type: 3}
-  portraitSprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
+  candidateType: 1
+  fullBodySprite: {fileID: 21300000, guid: 04b595f72b8f9884b93ed6f7ce56bab3, type: 3}
+  backSprite: {fileID: 21300000, guid: ae05e42248e1f484fbb2d1ddc7787551, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 04b595f72b8f9884b93ed6f7ce56bab3, type: 3}
   baseStats:
     age: 21
     heightFt: 6'2
-    weightLbs: 200
+    weightLbs: 400
   dialog: {fileID: 0}
   passiveBodyLanguages:
   - {fileID: 0}

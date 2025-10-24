@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: GurtessNHuman
   m_EditorClassIdentifier: Assembly-CSharp::CandidateVariant
   candidateType: 1
-  fullBodySprite: {fileID: 21300000, guid: 6f1bef29845150e4981adddec7711528, type: 3}
-  backSprite: {fileID: 21300000, guid: 42a68e6e8af178344882ad7aef0b5930, type: 3}
-  portraitSprite: {fileID: 21300000, guid: 6f1bef29845150e4981adddec7711528, type: 3}
+  fullBodySprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
+  backSprite: {fileID: 21300000, guid: de7c01294d7c421449ffc1f7638acad3, type: 3}
+  portraitSprite: {fileID: 21300000, guid: 3c5e655f333393b4087d7c0d00fc4b9a, type: 3}
   baseStats:
     age: 21
     heightFt: 6'2
