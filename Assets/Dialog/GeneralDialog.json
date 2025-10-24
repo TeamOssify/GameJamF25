@@ -19,7 +19,7 @@
           },
           {
             "Label": "C_ReplyHello",
-            "Candidate": "Hello player!",
+            "Candidate": "Hello Inspector! Lets get going then..",
             "Stop": true
           },
           {
