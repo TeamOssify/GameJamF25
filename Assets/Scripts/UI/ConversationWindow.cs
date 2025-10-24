@@ -13,6 +13,8 @@ public class ConversationWindow : MonoBehaviour {
     [SerializeField] private DialogMessage playerMessagePrefab;
     [SerializeField] private PlayerQuestion questionPrefab;
     [SerializeField] private RectTransform windowContents;
+    [SerializeField] private GameObject questionUi;
+    [SerializeField] private GameObject questionButton;
 
     [Header("Sound")]
     [SerializeField] private SfxEventChannelSO sfxEventChannel;
@@ -141,6 +143,6 @@ public class ConversationWindow : MonoBehaviour {
     }
 
     public void QuestionButtonOnClick() {
-
+        questionUi.SetActive(true);
     }
 }

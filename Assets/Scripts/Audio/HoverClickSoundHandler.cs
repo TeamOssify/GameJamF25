@@ -21,19 +21,19 @@ public sealed class HoverClickSoundHandler : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData) {
         if (hoverEnterSound) {
-            sfxEventChannel.PlayVolumedSoundEffect(hoverEnterSound, hoverEnterVolume);
+            sfxEventChannel?.PlayVolumedSoundEffect(hoverEnterSound, hoverEnterVolume);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData) {
         if (hoverExitSound) {
-            sfxEventChannel.PlayVolumedSoundEffect(hoverExitSound, hoverExitVolume);
+            sfxEventChannel?.PlayVolumedSoundEffect(hoverExitSound, hoverExitVolume);
         }
     }
 
     public void OnPointerClick(PointerEventData eventData) {
         if (clickSound && eventData.button == PointerEventData.InputButton.Left) {
-            sfxEventChannel.PlayVolumedSoundEffect(clickSound, clickVolume);
+            sfxEventChannel?.PlayVolumedSoundEffect(clickSound, clickVolume);
         }
     }
 }
