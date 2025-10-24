@@ -80,20 +80,46 @@
       {
         "Tree": [
           {
-            "Player": "While walking in a desert, Charles, you come across a turtle on it's back. Do you flip it over, or do you leave it to bake in the sun?"
+            "Player": "You are alone walking along a beach and see a turtle stuck on its back. What would you do?"
           },
           {
-            "Candidate": "I would never live with myself if I left that turtle unturned!",
-            "Stop": true
+            "Candidate": "I’d be worried about being bit. The turtle could have some disease, so I wouldn’t want to go up and handle it."
+          },
+          {
+            "Player": "So, you would just ignore the turtle?"
+          },
+          {
+            "Candidate": "No, no. I just wouldn’t want to move it with my bare hands."
+          },
+          {
+            "Candidate": "I’d probably look around and see if there’s something like a stick or another item that I could use to flip it over from a distance."
           }
         ]
       }
     ],
     "YouSeeADeer": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You decide to invite some people over for dinner. Who do you invite?"
+          },
+          {
+            "Candidate": "Ran out of  time :("
+          }
+        ]
+      }
     ],
     "WhoWouldYouBringForDinner": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You decide to invite some people over for dinner. Who do you invite?"
+          },
+          {
+            "Candidate": "Ran out of  time :("
+          }
+        ]
+      }
     ]
   },
   "NonHuman": {
@@ -150,7 +176,25 @@
       }
     ],
     "YouSeeAStuckTurtle": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You are alone walking along a beach and see a turtle stuck on its back. What would you do?"
+          },
+          {
+            "Candidate": "I’d be worried about being bit. The turtle could have some disease, so I wouldn’t want to go up and handle it."
+          },
+          {
+            "Player": "So, you would just ignore the turtle?"
+          },
+          {
+            "Candidate": "No, no. I just wouldn’t want to move it with my bare hands."
+          },
+          {
+            "Candidate": "I’d probably look around and see if there’s something like a stick or another item that I could use to flip it over from a distance."
+          }
+        ]
+      }
     ],
     "YouSeeADeer": [
       {
@@ -159,11 +203,38 @@
             "Player": "You are walking through the woods alone and see a lone deer. How do you feel?"
           },
           {
-            "Candidate": "It's always nice to see a piece of nature like that.",
+            "Candidate": "I’d think it was pretty.",
             "PlayerResponses": {
-              "": ""
+              "Alright.": "Accept",
+              "Please expand.": "Expand"
             }
           },
+          {
+            "Label": "Accept",
+            "Candidate": "It's always nice to see a piece of nature like that.",
+            "Stop": true
+          },
+          {
+            "Label": "Expand",
+            "Candidate": "Oh, umm- what was that the wrong answer or something?"
+          },
+          {
+            "Candidate": "Well this is a test, isn’t it? So there are right and wrong answers.",
+            "Stop": true
+          }
+        ]
+      },
+      {
+        "Tree": [
+          {
+            "Player": "You are walking through the woods alone and see a lone deer. How do you feel?"
+          },
+          {
+            "Candidate": "Okay, I’d probably think- umm- I’m not really sure what I’d think. I’ve never seen a deer before."
+          },
+          {
+            "Candidate": "I guess I’d probably think it was pretty. That’s what most people think, right?"
+          }
         ]
       }
     ],
