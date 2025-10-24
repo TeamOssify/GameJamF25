@@ -12,7 +12,7 @@ public sealed class BackgroundMusicEventChannelSO : ScriptableObject {
     public void ChangeBgmFade(AudioClip clip) {
         Debug.Assert(OnChangeBgmFade != null, "OnChangeBgmFade != null");
 
-        OnChangeBgmFade.Invoke(clip);
+        OnChangeBgmFade?.Invoke(clip);
     }
 
     public void ChangeBgmImmediate(AudioClip clip) {
@@ -24,12 +24,12 @@ public sealed class BackgroundMusicEventChannelSO : ScriptableObject {
     public void PauseBgm() {
         Debug.Assert(OnPauseBgm != null, "OnPauseBgm != null");
 
-        OnPauseBgm.Invoke();
+        OnPauseBgm?.Invoke();
     }
 
     public void UnpauseBgm() {
         Debug.Assert(OnUnpauseBgm != null, "OnUnpauseBgm != null");
 
-        OnUnpauseBgm.Invoke();
+        OnUnpauseBgm?.Invoke();
     }
 }

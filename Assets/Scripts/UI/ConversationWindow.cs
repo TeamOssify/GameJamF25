@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ConversationWindow : MonoBehaviour {
     [Header("Dialog")]
     [SerializeField] private DialogEventChannelSO dialogEventChannel;
+
+    [SerializeField] private GameObject dialogTreeSeparatorPrefab;
     [SerializeField] private DialogMessage candidateMessagePrefab;
     [SerializeField] private DialogMessage playerMessagePrefab;
     [SerializeField] private PlayerQuestion questionPrefab;
@@ -14,9 +16,11 @@ public class ConversationWindow : MonoBehaviour {
 
     [Header("Sound")]
     [SerializeField] private SfxEventChannelSO sfxEventChannel;
+
     [SerializeField] private AudioClip newMessageSound;
     [SerializeField] private float newMessageVolume = 0.2f;
 
+    private bool _isNewTree = false;
     private readonly Queue<(DialogOwner owner, string message)> _dialogQueue = new();
     private readonly Queue<string> _questionQueue = new();
     private readonly List<PlayerQuestion> _currentQuestions = new();
@@ -25,6 +29,7 @@ public class ConversationWindow : MonoBehaviour {
         StartCoroutine(ListenForDialog());
 
         dialogEventChannel.OnClearDialog += OnClearDialog;
+        dialogEventChannel.OnNewDialogTree += OnNewDialogTree;
         dialogEventChannel.OnNewDialogMessage += OnNewDialogMessage;
         dialogEventChannel.OnNewPlayerQuestions += OnNewPlayerQuestions;
         dialogEventChannel.OnChosenPlayerQuestion += OnChosenPlayerQuestion;
@@ -32,9 +37,14 @@ public class ConversationWindow : MonoBehaviour {
 
     private void OnDisable() {
         dialogEventChannel.OnClearDialog -= OnClearDialog;
+        dialogEventChannel.OnNewDialogTree -= OnNewDialogTree;
         dialogEventChannel.OnNewDialogMessage -= OnNewDialogMessage;
         dialogEventChannel.OnNewPlayerQuestions -= OnNewPlayerQuestions;
         dialogEventChannel.OnChosenPlayerQuestion -= OnChosenPlayerQuestion;
+    }
+
+    private void OnNewDialogTree() {
+        _isNewTree = true;
     }
 
     private void OnClearDialog() {
@@ -63,6 +73,11 @@ public class ConversationWindow : MonoBehaviour {
         while (enabled) {
             var created = false;
 
+            if (_isNewTree && (_dialogQueue.Count > 0 || _questionQueue.Count > 0)) {
+                _isNewTree = false;
+                InstantiateTreeSeparator();
+            }
+
             if (!created && _dialogQueue.TryDequeue(out var dialog)) {
                 InstantiateMessage(dialog.owner, dialog.message);
                 created = true;
@@ -87,6 +102,10 @@ public class ConversationWindow : MonoBehaviour {
         }
     }
 
+    private void InstantiateTreeSeparator() {
+        Instantiate(dialogTreeSeparatorPrefab, windowContents);
+    }
+
     private void InstantiateMessage(DialogOwner owner, string message) {
         var messagePrefab = owner == DialogOwner.Player
             ? playerMessagePrefab
@@ -97,8 +116,7 @@ public class ConversationWindow : MonoBehaviour {
         newMessage.SetText(message);
     }
 
-    private void InstantiateQuestion(string question)
-    {
+    private void InstantiateQuestion(string question) {
         var newQuestion = Instantiate(questionPrefab, windowContents);
 
         newQuestion.SetText(question);

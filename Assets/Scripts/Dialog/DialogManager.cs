@@ -36,6 +36,8 @@ public sealed class DialogManager : MonoBehaviour {
     }
 
     private IEnumerator TestDialog() {
+        dialogEventChannel.RaiseNewDialogTree();
+
         dialogEventChannel.RaiseOnNewDialogMessage(DialogOwner.Candidate, "Its ya boyyy");
 
         yield return WaitForSecondsCache.Get(1);

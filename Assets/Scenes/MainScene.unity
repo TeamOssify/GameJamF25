@@ -1930,18 +1930,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5835468237357811332, guid: 15129703094489a49949d47eeaaff189, type: 3}
-      propertyPath: m_MinHeight
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374025041604787480, guid: 15129703094489a49949d47eeaaff189, type: 3}
-      propertyPath: m_ChildForceExpandWidth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7913414272638111201, guid: 15129703094489a49949d47eeaaff189, type: 3}
-      propertyPath: m_VerticalFit
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

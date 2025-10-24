@@ -2046,6 +2046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   dialogEventChannel: {fileID: 11400000, guid: b6ff71977b7f88841b006c91755b15f3, type: 2}
+  dialogTreeSeparatorPrefab: {fileID: 3889215975482064932, guid: 6d2e170c4696d6b458391eb1a5eb3e73, type: 3}
   candidateMessagePrefab: {fileID: 7647152446731257539, guid: dc127551ea1d13c4bba72906dd37d27d, type: 3}
   playerMessagePrefab: {fileID: 5981690602723662063, guid: 940fa03217240964d99f8beaf1250cfe, type: 3}
   questionPrefab: {fileID: 8026000141985598920, guid: 04845b17732dffa4586e69a975f68000, type: 3}

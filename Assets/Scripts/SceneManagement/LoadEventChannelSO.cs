@@ -17,6 +17,6 @@ public class LoadEventChannelSO : ScriptableObject {
         Debug.Assert(locationsToLoad.All(x => x != null), "A scene load was requested,but the array of locations to load contains 1 or more null scenes!");
         Debug.Assert(OnLoadingRequested != null, "A scene load was requested, but no listeners were found on the scene load action!");
 
-        OnLoadingRequested.Invoke(locationsToLoad, sceneLoadType);
+        OnLoadingRequested?.Invoke(locationsToLoad, sceneLoadType);
     }
 }
