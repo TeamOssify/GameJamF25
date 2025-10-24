@@ -565,7 +565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Game (You Lost)
+  m_text: Hello Inspector
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}
   m_sharedMaterial: {fileID: -5966650571700716080, guid: 95f31e79cd6abb0449dc7e7acb4bdb90, type: 2}

@@ -409,7 +409,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731827931}
   m_HandleRect: {fileID: 1731827930}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -695,7 +695,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 518461059}
-  m_TextViewport: {fileID: 0}
+  m_TextViewport: {fileID: 900967126}
   m_TextComponent: {fileID: 518461059}
   m_Placeholder: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
