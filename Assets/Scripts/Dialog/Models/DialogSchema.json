@@ -78,8 +78,28 @@
             }
           }
         },
-        "TurtleQuestion": {
-          "description": "Turtle question dialog.",
+        "YouAndYourChildAreStarving": {
+          "type": "array",
+          "items": {
+            "description": "A sequence of dialog entries.",
+            "$ref": "#/properties/Human/properties/Intro/items"
+          }
+        },
+        "YouSeeAStuckTurtle": {
+          "type": "array",
+          "items": {
+            "description": "A sequence of dialog entries.",
+            "$ref": "#/properties/Human/properties/Intro/items"
+          }
+        },
+        "YouSeeADeer": {
+          "type": "array",
+          "items": {
+            "description": "A sequence of dialog entries.",
+            "$ref": "#/properties/Human/properties/Intro/items"
+          }
+        },
+        "WhoWouldYouBringForDinner": {
           "type": "array",
           "items": {
             "description": "A sequence of dialog entries.",

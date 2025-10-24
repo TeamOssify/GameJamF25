@@ -31,7 +31,39 @@
       }
     ],
     "YouAndYourChildAreStarving": [
-      null
+      {
+        "Tree": [
+          {
+            "Player": "You and your child are on the brink of starvation, and you have a single piece of bread left. What do you do?"
+          },
+          {
+            "Candidate": "Well, I'm worried that they'd have a difficult time surviving on their own."
+          },
+          {
+            "Candidate": "I'd probably split the bread with them in hopes that I could help both of us find some more food.",
+            "PlayerResponses": {
+              "Alright.": "Accept",
+              "You have to pick between yourself and your child.": "Choose"
+            }
+          },
+          {
+            "Label": "Accept",
+            "Candidate": "I think splitting the bread would be for the best.",
+            "Stop": true
+          },
+          {
+            "Label": "Choose",
+            "Candidate": "What?"
+          },
+          {
+            "Candidate": "Well, umm, I- I think I..."
+          },
+          {
+            "Candidate": "Gosh starving probably hurts a lot. I mean, who'd be able to not eat the bread... right?",
+            "Stop": true
+          }
+        ]
+      }
     ],
     "YouSeeAStuckTurtle": [
       {
@@ -78,7 +110,44 @@
       }
     ],
     "YouAndYourChildAreStarving": [
-      null
+      {
+        "Player": "You and your child are on the brink of-"
+      },
+      {
+        "Candidate": "What? That doesn't make sense, I don't have a child."
+      },
+      {
+        "Player": "It's just a hypothetical, please engage with the question as if it were your child."
+      },
+      {
+        "Player": "You and your child are on the brink of starvation, and you have a single piece of bread left. What do you do?"
+      },
+      {
+        "Candidate": "Well I don't know this kid, so I'd probably eat the bread. Why should I help a kid I don't know anything about?",
+        "PlayerResponses": {
+          "Fine. It's a child you don't know, but they have no one else to turn to and are desperately hoping that you will help them.": "Change",
+          "Please engage with the question as if it were your own child.": "Engage"
+        }
+      },
+      {
+        "Label": "Change",
+        "Candidate": "Okay. I'd eat the bread then since it's not my kid. If they don't have anyone providing for them, then they need to provide for themselves."
+      },
+      {
+        "Candidate": "I'm not gonna sacrifice myself for them when they'd probably die soon anyway.",
+        "Stop": true
+      },
+      {
+        "Label": "Choose",
+        "Candidate": "So what?"
+      },
+      {
+        "Candidate": "Whether I sit here and pretend it's my kid or not doesn't matter. It's still someone I know absolutely nothing about."
+      },
+      {
+        "Candidate": "I have no memories or experiences with them, so I don't have any reason to put their life over my own. I'd eat the bread.",
+        "Stop": true
+      }
     ],
     "YouSeeAStuckTurtle": [
       null
