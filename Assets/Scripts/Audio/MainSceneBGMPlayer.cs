@@ -6,7 +6,7 @@ public class MainSceneBGMPlayer : MonoBehaviour {
     [SerializeField] private AudioClip bgm;
     [SerializeField] private BackgroundMusicEventChannelSO bgmEventChannel;
 
-    private void Awake() {
+    private void Start() {
         bgmEventChannel.ChangeBgmFade(bgm);
     }
 }

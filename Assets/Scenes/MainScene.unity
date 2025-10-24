@@ -2253,6 +2253,10 @@ PrefabInstance:
       propertyPath: entranceLight
       value: 
       objectReference: {fileID: 569695035}
+    - target: {fileID: 1395897219476094905, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fd2c264567f3a14b8948328df0f8828, type: 3}
     - target: {fileID: 2293661282723320965, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: timerText
       value: 
@@ -2265,6 +2269,10 @@ PrefabInstance:
       propertyPath: candidatePhysicalManager
       value: 
       objectReference: {fileID: 42092381}
+    - target: {fileID: 5316513151434512418, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
+      propertyPath: bgmVolume
+      value: 0.184
+      objectReference: {fileID: 0}
     - target: {fileID: 6869008292193003053, guid: 015e10967eb0aa146b2a7166240c1fe1, type: 3}
       propertyPath: notesText
       value: 
