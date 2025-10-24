@@ -11,6 +11,7 @@ public class ShiftManager : MonoBehaviour {
     [SerializeField] private LoadEventChannelSO loadEventChannel;
     [SerializeField] private SceneReference reportScene;
     [SerializeField] private CandidateManager candidateManager;
+    [SerializeField] private RoomMoodManager roomMoodManager;  // Changing the mood of the room after shifts
 
     //starts timer and increments shift number
     public void StartShift() {
@@ -45,6 +46,11 @@ public class ShiftManager : MonoBehaviour {
         }
         shiftData.candidatesProcessedCorrectly = correct;
         shiftData.candidatesProcessedIncorrectly = incorrect;
+
+        // Room mood manager being called
+        if (roomMoodManager != null) {
+            roomMoodManager.UpdateEnvironment(incorrect, correct); // passing in the players answers
+        }
 
         loadEventChannel.RaiseEvent(reportScene, SceneLoadType.Immediate);
     }
